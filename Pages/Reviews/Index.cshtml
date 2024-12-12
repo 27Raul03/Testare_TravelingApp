@@ -1,0 +1,78 @@
+﻿@page
+@model Testare_TravelingApp.Pages.Reviews.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].DatePosted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].Activity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].Restaurant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].NatureTrail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Review[0].TouristAttraction)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Review) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatePosted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activity.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Restaurant.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NatureTrail.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TouristAttraction.Description)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ReviewId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ReviewId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ReviewId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@page
+@model Testare_TravelingApp.Pages.NatureTrails.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>NatureTrail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="NatureTrail.Name" class="control-label"></label>
+                <input asp-for="NatureTrail.Name" class="form-control" />
+                <span asp-validation-for="NatureTrail.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="NatureTrail.Description" class="control-label"></label>
+                <input asp-for="NatureTrail.Description" class="form-control" />
+                <span asp-validation-for="NatureTrail.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="NatureTrail.Location" class="control-label"></label>
+                <input asp-for="NatureTrail.Location" class="form-control" />
+                <span asp-validation-for="NatureTrail.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NatureTrail.LengthInKm" class="control-label"></label>
+                <input asp-for="NatureTrail.LengthInKm" class="form-control" />
+                <span asp-validation-for="NatureTrail.LengthInKm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

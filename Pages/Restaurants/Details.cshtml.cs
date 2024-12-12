@@ -8,18 +8,17 @@ using Microsoft.EntityFrameworkCore;
 using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
 
-namespace Testare_TravelingApp.Pages.Restaurnats
+namespace Testare_TravelingApp.Pages.Restaurants
 {
-    public class DeleteModel : PageModel
+    public class DetailsModel : PageModel
     {
         private readonly Testare_TravelingApp.Data.Testare_TravelingAppContext _context;
 
-        public DeleteModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context)
+        public DetailsModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
         public Restaurant Restaurant { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -30,7 +29,6 @@ namespace Testare_TravelingApp.Pages.Restaurnats
             }
 
             var restaurant = await _context.Restaurant.FirstOrDefaultAsync(m => m.RestaurantId == id);
-
             if (restaurant == null)
             {
                 return NotFound();
@@ -40,24 +38,6 @@ namespace Testare_TravelingApp.Pages.Restaurnats
                 Restaurant = restaurant;
             }
             return Page();
-        }
-
-        public async Task<IActionResult> OnPostAsync(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var restaurant = await _context.Restaurant.FindAsync(id);
-            if (restaurant != null)
-            {
-                Restaurant = restaurant;
-                _context.Restaurant.Remove(Restaurant);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToPage("./Index");
         }
     }
 }

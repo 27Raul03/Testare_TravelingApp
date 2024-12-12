@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
 
-namespace Testare_TravelingApp.Pages.Restaurnats
+namespace Testare_TravelingApp.Pages.Restaurants
 {
     public class CreateModel : PageModel
     {

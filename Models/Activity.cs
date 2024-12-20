@@ -22,7 +22,7 @@ namespace Testare_TravelingApp.Models
         public DateTime? EndDate { get; set; }
 
         // Navigation Properties
-        public ICollection<Review> Reviews { get; set; }
-        public ICollection<AgendaActivity> AgendaActivities { get; set; } // Many-to-Many
+        public ICollection<Review>? Reviews { get; set; }
+        public ICollection<AgendaActivity>? AgendaActivities { get; set; }
     }
 }

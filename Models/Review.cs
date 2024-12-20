@@ -24,18 +24,18 @@ namespace Testare_TravelingApp.Models
 
         [ForeignKey("Activity")]
         public int? ActivityId { get; set; }
-        public Activity Activity { get; set; }
+        public Activity? Activity { get; set; }
 
         [ForeignKey("Restaurant")]
         public int? RestaurantId { get; set; }
-        public Restaurant Restaurant { get; set; }
+        public Restaurant? Restaurant { get; set; }
 
         [ForeignKey("NatureTrail")]
         public int? NatureTrailId { get; set; }
-        public NatureTrail NatureTrail { get; set; }
+        public NatureTrail? NatureTrail { get; set; }
 
         [ForeignKey("TouristAttraction")]
         public int? TouristAttractionId { get; set; }
-        public TouristAttraction TouristAttraction { get; set; }
+        public TouristAttraction? TouristAttraction { get; set; }
     }
 }

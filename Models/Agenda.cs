@@ -18,6 +18,6 @@ namespace Testare_TravelingApp.Models
         public int UserId { get; set; }
         public User User { get; set; }
 
-        public ICollection<AgendaActivity> AgendaActivities { get; set; } // Many-to-Many
+        public ICollection<AgendaActivity>? AgendaActivities { get; set; } // Many-to-Many
     }
 }

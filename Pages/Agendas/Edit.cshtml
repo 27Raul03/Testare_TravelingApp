@@ -2,10 +2,10 @@
 @model Testare_TravelingApp.Pages.Agendas.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Agenda";
 }
 
-<h1>Edit</h1>
+<h1>Edit Agenda</h1>
 
 <h4>Agenda</h4>
 <hr />
@@ -20,15 +20,48 @@
                 <input asp-for="Agenda.Title" class="form-control" />
                 <span asp-validation-for="Agenda.Title" class="text-danger"></span>
             </div>
+
             <div class="form-group">
+                <span class="text-danger">*</span>
                 <label asp-for="Agenda.DateCreated" class="control-label"></label>
-                <input asp-for="Agenda.DateCreated" class="form-control" />
+                <input asp-for="Agenda.DateCreated" type="date" class="form-control" readonly />
                 <span asp-validation-for="Agenda.DateCreated" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Agenda.UserId" class="control-label"></label>
-                <select asp-for="Agenda.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <select asp-for="Agenda.UserId" class="form-control" asp-items="ViewBag.UserId">
+                    <option value="">Please select...</option>
+                </select>
                 <span asp-validation-for="Agenda.UserId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Agenda.ActivityId" class="control-label"></label>
+                <select asp-for="Agenda.ActivityId" class="form-control" asp-items="ViewBag.ActivityId">
+                    <option value="">Please select...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Agenda.RestaurantId" class="control-label"></label>
+                <select asp-for="Agenda.RestaurantId" class="form-control" asp-items="ViewBag.RestaurantId">
+                    <option value="">Please select...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Agenda.NatureTrailId" class="control-label"></label>
+                <select asp-for="Agenda.NatureTrailId" class="form-control" asp-items="ViewBag.NatureTrailId">
+                    <option value="">Please select...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Agenda.TouristAttractionId" class="control-label"></label>
+                <select asp-for="Agenda.TouristAttractionId" class="form-control" asp-items="ViewBag.TouristAttractionId">
+                    <option value="">Please select...</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -42,5 +75,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

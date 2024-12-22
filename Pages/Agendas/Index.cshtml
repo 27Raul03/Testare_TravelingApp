@@ -2,47 +2,58 @@
 @model Testare_TravelingApp.Pages.Agendas.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Agenda";
 }
 
-<h1>Index</h1>
+<h1>Your Agenda</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn btn-primary" style="background-color: lightblue;">Add New Activity</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Agenda[0].Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Agenda[0].DateCreated)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Agenda[0].User)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Agenda) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreated)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Email)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.AgendaId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.AgendaId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.AgendaId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="row">
+    <hr />
+    @foreach (var item in Model.Agenda)
+    {
+        <div class="col-md-4 mb-4">
+            <p>
+                <div class="card-header">
+                    <h5>@item.Title</h5>
+                </div>
+                    <p class="card-body">
+                        <p class="card-text mt-1">
+                            <strong>Created at:</strong><span class="text-muted">@item.DateCreated.ToString("MMMM dd, yyyy")</span>
+                        </p>
+                        <p class="card-text mt-3">
+                            <strong>Created by:</strong> @item.User.Email
+                        </p>
+                        <p>
+                            @if (item.Activity != null)
+                            {
+                                <span class="badge" style="background-color: #c4c1e0;">
+                                    Activity: @item.Activity.Name<br />
+                                    Starting at: @item.Activity.StartDate
+                                </span>
+                            }
+                            @if (item.Restaurant != null)
+                            {
+                                <span class="badge" style="background-color: #c7b198;">Restaurant: @item.Restaurant.Name</span>
+                            }
+                            @if (item.NatureTrail != null)
+                            {
+                                <span class="badge" style="background-color: #ffa952;">Nature Trail: @item.NatureTrail.Name</span>
+                            }
+                            @if (item.TouristAttraction != null)
+                            {
+                                <span class="badge" style="background-color: #ddeedf;">Attraction: @item.TouristAttraction.Name</span>
+                            }
+                        </p>
+                </p>
+                <div class="card-footer text-end">
+                    <a asp-page="./Edit" asp-route-id="@item.AgendaId" class="btn btn-sm" style="background-color: pink;">Edit</a>
+                    <a asp-page="./Details" asp-route-id="@item.AgendaId" class="btn btn-sm" style="background-color: sandybrown;">Details</a>
+                    <a asp-page="./Delete" asp-route-id="@item.AgendaId" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+        </div>
+    }
+</div>

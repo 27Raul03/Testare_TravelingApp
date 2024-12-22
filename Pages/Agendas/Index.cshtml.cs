@@ -24,7 +24,11 @@ namespace Testare_TravelingApp.Pages.Agendas
         public async Task OnGetAsync()
         {
             Agenda = await _context.Agenda
-                .Include(a => a.User).ToListAsync();
+                .Include(r => r.Activity)
+                .Include(r => r.NatureTrail)
+                .Include(r => r.Restaurant)
+                .Include(r => r.TouristAttraction)
+                .Include(r => r.User).ToListAsync();
         }
     }
 }

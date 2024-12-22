@@ -2,77 +2,58 @@
 @model Testare_TravelingApp.Pages.Reviews.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Reviews";
 }
 
 <h1>Reviews</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn" style="background-color:lightblue">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].Rating)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].Comment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].DatePosted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].Activity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].Restaurant)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].NatureTrail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Review[0].TouristAttraction)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Review) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DatePosted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Activity.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Restaurant.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NatureTrail.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TouristAttraction.Description)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ReviewId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ReviewId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ReviewId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="row">
+    <hr />
+    @foreach (var item in Model.Review)
+    {
+       
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>@item.User.Email</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <span class="badge text-dark" style="background-color:khaki">@item.Rating / 5</span>
+                        <span class="text-muted">@item.DatePosted.ToString("MMMM dd, yyyy")</span>
+                    </div>
+                    <p class="card-text mt-3">
+                        <strong>Comment:</strong> @item.Comment
+                    </p>
+                    <p>
+                        @if (item.Activity != null)
+                        {
+                            <span class="badge" style="background-color:#c4c1e0">Activity: @item.Activity.Name</span>
+                        }
+                        @if (item.Restaurant != null)
+                        {
+                            <span class="badge" style="background-color:#c7b198">Restaurant: @item.Restaurant.Name</span>
+                        }
+                        @if (item.NatureTrail != null)
+                        {
+                            <span class="badge" style="background-color:#ffa952">Nature Trail: @item.NatureTrail.Name</span>
+                        }
+                        @if (item.TouristAttraction != null)
+                        {
+                            <span class="badge" style="background-color:#ddeedf">Attraction: @item.TouristAttraction.Name</span>
+                        }
+                    </p>
+                </div>
+                <div class="card-footer text-end">
+                    <a asp-page="./Edit" asp-route-id="@item.ReviewId" class="btn btn-sm" style="background-color:pink">Edit</a>
+                    <a asp-page="./Details" asp-route-id="@item.ReviewId" class="btn btn-sm" style="background-color:sandybrown">Details</a>
+                    <a asp-page="./Delete" asp-route-id="@item.ReviewId" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

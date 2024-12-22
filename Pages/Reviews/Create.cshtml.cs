@@ -21,24 +21,25 @@ namespace Testare_TravelingApp.Pages.Reviews
 
         public IActionResult OnGet()
         {
-        ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Description");
-        ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Description");
-        ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Address");
-        ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Description");
-        ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
+            PopulateDropdowns();
             return Page();
         }
 
         [BindProperty]
         public Review Review { get; set; } = default!;
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        // Reîncărcarea dropdown-urilor
+        private void PopulateDropdowns()
+        {
+            ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
+            ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Name");
+            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Name");
+            ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Name");
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
+        }
+
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
 
             _context.Review.Add(Review);
             await _context.SaveChangesAsync();

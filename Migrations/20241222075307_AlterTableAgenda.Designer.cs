@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Testare_TravelingApp.Data;
 
@@ -11,9 +12,11 @@ using Testare_TravelingApp.Data;
 namespace Testare_TravelingApp.Migrations
 {
     [DbContext(typeof(Testare_TravelingAppContext))]
-    partial class Testare_TravelingAppContextModelSnapshot : ModelSnapshot
+    [Migration("20241222075307_AlterTableAgenda")]
+    partial class AlterTableAgenda
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -370,26 +373,22 @@ namespace Testare_TravelingApp.Migrations
                 {
                     b.HasOne("Testare_TravelingApp.Models.Activity", "Activity")
                         .WithMany("Reviews")
-                        .HasForeignKey("ActivityId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .HasForeignKey("ActivityId");
 
                     b.HasOne("Testare_TravelingApp.Models.NatureTrail", "NatureTrail")
                         .WithMany("Reviews")
-                        .HasForeignKey("NatureTrailId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .HasForeignKey("NatureTrailId");
 
                     b.HasOne("Testare_TravelingApp.Models.Restaurant", "Restaurant")
                         .WithMany("Reviews")
-                        .HasForeignKey("RestaurantId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .HasForeignKey("RestaurantId");
 
                     b.HasOne("Testare_TravelingApp.Models.TouristAttraction", "TouristAttraction")
                         .WithMany("Reviews")
-                        .HasForeignKey("TouristAttractionId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .HasForeignKey("TouristAttractionId");
 
                     b.HasOne("Testare_TravelingApp.Models.User", "User")
-                        .WithMany("Reviews")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -435,11 +434,6 @@ namespace Testare_TravelingApp.Migrations
                 {
                     b.Navigation("AgendaActivities");
 
-                    b.Navigation("Reviews");
-                });
-
-            modelBuilder.Entity("Testare_TravelingApp.Models.User", b =>
-                {
                     b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618

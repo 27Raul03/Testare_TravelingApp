@@ -36,10 +36,10 @@ namespace Testare_TravelingApp.Pages.Reviews
                 return NotFound();
             }
             Review = review;
-           ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Description");
-           ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Description");
-           ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Address");
-           ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Description");
+           ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
+           ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Name");
+           ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Name");
+           ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Name");
            ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
             return Page();
         }

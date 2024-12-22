@@ -28,7 +28,14 @@ namespace Testare_TravelingApp.Pages.Reviews
                 return NotFound();
             }
 
-            var review = await _context.Review.FirstOrDefaultAsync(m => m.ReviewId == id);
+            var review = await _context.Review
+                .Include(a => a.User)
+                .Include(a => a.Activity)
+                .Include(a => a.NatureTrail)
+                .Include(a => a.Restaurant)
+                .Include(a => a.TouristAttraction)
+                .FirstOrDefaultAsync(m => m.ReviewId == id);
+
             if (review == null)
             {
                 return NotFound();

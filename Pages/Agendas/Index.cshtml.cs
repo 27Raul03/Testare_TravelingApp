@@ -34,7 +34,7 @@ namespace Testare_TravelingApp.Pages.Agendas
                     .Include(r => r.Restaurant)
                     .Include(r => r.TouristAttraction)
                     .Include(r => r.User)
-                    .Where(a => a.UserId == int.Parse(user.Id))
+                    .Where(a => a.User.Email == user.Email)
                     .ToListAsync();
             }
             else

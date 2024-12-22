@@ -11,14 +11,17 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var user in Model.User)
+        @foreach (var user in Model.UserList)
         {
             <tr>
                 <td>@user.Email</td>
                 <td>
-                    <form method="post" asp-page-handler="Delete" asp-route-id="@user.UserId" style="display:inline;">
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    @if (user.Email == Model.CurrentUserEmail)
+                    {
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@user.UserId" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    }
                 </td>
             </tr>
         }

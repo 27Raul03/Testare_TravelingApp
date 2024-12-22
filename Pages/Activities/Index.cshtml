@@ -8,7 +8,7 @@
 <h1>Activities</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn" style="background-color: lightblue;">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -50,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ActivityId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ActivityId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ActivityId">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@item.ActivityId" class="btn btn-sm" style="background-color: pink;">Edit</a>
+                    <a asp-page="./Details" asp-route-id="@item.ActivityId" class="btn btn-sm" style="background-color: sandybrown;">Details</a>
+                <a asp-page="./Delete" asp-route-id="@item.ActivityId" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
 }

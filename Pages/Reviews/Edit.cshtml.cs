@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
 
 namespace Testare_TravelingApp.Pages.Reviews
@@ -14,10 +10,12 @@ namespace Testare_TravelingApp.Pages.Reviews
     public class EditModel : PageModel
     {
         private readonly Testare_TravelingApp.Data.Testare_TravelingAppContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public EditModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context)
+        public EditModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         [BindProperty]
@@ -30,27 +28,52 @@ namespace Testare_TravelingApp.Pages.Reviews
                 return NotFound();
             }
 
-            var review =  await _context.Review.FirstOrDefaultAsync(m => m.ReviewId == id);
+            var review = await _context.Review
+                .Include(r => r.User) // Include pentru a accesa email-ul
+                .FirstOrDefaultAsync(m => m.ReviewId == id);
+
             if (review == null)
             {
                 return NotFound();
             }
+
+            // Obține utilizatorul logat
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            // Verifică dacă utilizatorul logat are permisiunea de editare
+            if (currentUser == null || review.User.Email != currentUser.Email)
+            {
+                return RedirectToPage("/Error", new { errorMessage = "Doar autorul review-ului poate edita" }); 
+            }
+
             Review = review;
-           ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
-           ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Name");
-           ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Name");
-           ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Name");
-           ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
+            ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
+            ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Name");
+            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Name");
+            ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Name");
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
+            // Obține review-ul din baza de date pentru verificare
+            var review = await _context.Review
+                .Include(r => r.User) // Include pentru a accesa email-ul
+                .FirstOrDefaultAsync(m => m.ReviewId == Review.ReviewId);
+
+            if (review == null)
             {
-                return Page();
+                return NotFound();
+            }
+
+            // Obține utilizatorul logat
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            // Verifică dacă utilizatorul logat are permisiunea de editare
+            if (currentUser == null || review.User.Email != currentUser.Email)
+            {
+                return Forbid(); // Sau return RedirectToPage("/Error", new { message = "Unauthorized access" });
             }
 
             _context.Attach(Review).State = EntityState.Modified;

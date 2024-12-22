@@ -1,9 +1,5 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-#nullable disable
-
+﻿// ConfirmEmailModel.cs
 using System;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -23,17 +19,15 @@ namespace Testare_TravelingApp.Areas.Identity.Pages.Account
             _userManager = userManager;
         }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         [TempData]
         public string StatusMessage { get; set; }
+
+        // OnGetAsync va confirma email-ul și va redirecționa utilizatorul la /Users/Create dacă succesul este obținut
         public async Task<IActionResult> OnGetAsync(string userId, string code)
         {
             if (userId == null || code == null)
             {
-                return RedirectToPage("/Index");
+                return RedirectToPage("/Index"); // Dacă parametrii lipsesc, redirecționează la pagina principală
             }
 
             var user = await _userManager.FindByIdAsync(userId);
@@ -42,9 +36,20 @@ namespace Testare_TravelingApp.Areas.Identity.Pages.Account
                 return NotFound($"Unable to load user with ID '{userId}'.");
             }
 
-            code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
+            code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code)); // Decodifică token-ul de confirmare
+
             var result = await _userManager.ConfirmEmailAsync(user, code);
+
+            // Setează mesajul de status în funcție de rezultatul confirmării
             StatusMessage = result.Succeeded ? "Thank you for confirming your email." : "Error confirming your email.";
+
+            // Dacă confirmarea a fost cu succes, redirecționează la pagina de completare a profilului
+            if (result.Succeeded)
+            {
+                return RedirectToPage("./Login"); // Redirecționează la pagina de completare a profilului
+            }
+
+            // Dacă confirmarea a eșuat, rămâi pe aceeași pagină și afișează mesajul de eroare
             return Page();
         }
     }

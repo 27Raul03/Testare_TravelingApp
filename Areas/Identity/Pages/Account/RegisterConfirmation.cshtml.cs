@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using System.Web;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Shared;
 
 namespace Testare_TravelingApp.Areas.Identity.Pages.Account
 {
@@ -26,22 +28,10 @@ namespace Testare_TravelingApp.Areas.Identity.Pages.Account
             _sender = sender;
         }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public string Email { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public bool DisplayConfirmAccountLink { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public string EmailConfirmationUrl { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string email, string returnUrl = null)
@@ -50,6 +40,7 @@ namespace Testare_TravelingApp.Areas.Identity.Pages.Account
             {
                 return RedirectToPage("/Index");
             }
+
             returnUrl = returnUrl ?? Url.Content("~/");
 
             var user = await _userManager.FindByEmailAsync(email);
@@ -59,13 +50,15 @@ namespace Testare_TravelingApp.Areas.Identity.Pages.Account
             }
 
             Email = email;
+
             // Once you add a real email sender, you should remove this code that lets you confirm the account
             DisplayConfirmAccountLink = true;
+
             if (DisplayConfirmAccountLink)
             {
                 var userId = await _userManager.GetUserIdAsync(user);
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code)); // encode the token
                 EmailConfirmationUrl = Url.Page(
                     "/Account/ConfirmEmail",
                     pageHandler: null,
@@ -73,6 +66,32 @@ namespace Testare_TravelingApp.Areas.Identity.Pages.Account
                     protocol: Request.Scheme);
             }
 
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostAsync(string email, string code)
+        {
+            if (email == null || code == null)
+            {
+                return NotFound("Email or code cannot be null.");
+            }
+
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return NotFound($"Unable to load user with email '{email}'.");
+            }
+
+            var decodedCode = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));  // Decodăm token-ul corect
+            var result = await _userManager.ConfirmEmailAsync(user, decodedCode);  // Confirmăm email-ul
+
+            if (result.Succeeded)
+            {
+               
+                return RedirectToPage("/Users/Create");  // Aici este pagina unde utilizatorul va completa profilul
+            }
+
+            // În caz de eroare, redirecționează utilizatorul înapoi pe aceeași pagină de confirmare
             return Page();
         }
     }

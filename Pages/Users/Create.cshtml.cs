@@ -30,10 +30,7 @@ namespace Testare_TravelingApp.Pages.Users
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+          
 
             _context.User.Add(User);
             await _context.SaveChangesAsync();

@@ -21,7 +21,7 @@ namespace Testare_TravelingApp.Models
 
         // Navigation Properties
 
-/*        public ICollection<Review> Reviews { get; set; }
-        public Agenda Agenda { get; set; } // 1:1 Relationship*/
+       public ICollection<Review> Reviews { get; set; }
+       /* public Agenda Agenda { get; set; } // 1:1 Relationship*/
     }
 }

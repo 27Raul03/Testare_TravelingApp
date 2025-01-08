@@ -1,42 +1,29 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.Users.IndexModel
 
-@{
-    ViewData["Title"] = "Index";
-}
+<h1>Users List</h1>
 
-<h1>Users</h1>
-
-<p>
-    <a class="custom-link" asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].UserName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].Email)
-            </th>
-            <th></th>
+            <th>Email</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.User) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                    <a class="custom-link" asp-page="./Edit" asp-route-id="@item.UserId">Edit</a> 
-                    <a class="custom-link" asp-page="./Details" asp-route-id="@item.UserId">Details</a> 
-                    <a class="custom-link" asp-page="./Delete" asp-route-id="@item.UserId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var user in Model.UserList)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>
+                    @if (user.Email == Model.CurrentUserEmail)
+                    {
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@user.UserId" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

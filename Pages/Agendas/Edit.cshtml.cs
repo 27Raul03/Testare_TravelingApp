@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +22,7 @@ namespace Testare_TravelingApp.Pages.Agendas
         [BindProperty]
         public Agenda Agenda { get; set; } = default!;
 
+        // Se apelează atunci când pagina de editare este accesată pentru a obține agenda.
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -30,25 +30,31 @@ namespace Testare_TravelingApp.Pages.Agendas
                 return NotFound();
             }
 
-            var agenda =  await _context.Agenda.FirstOrDefaultAsync(m => m.AgendaId == id);
+            // Căutăm agenda în baza de date folosind id-ul
+            var agenda = await _context.Agenda.FirstOrDefaultAsync(m => m.AgendaId == id);
             if (agenda == null)
             {
                 return NotFound();
             }
+
+            // Setăm agenda pentru a fi disponibilă în pagina de editare
             Agenda = agenda;
-           ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
+
+            // Populăm dropdown-urile pentru a fi folosite în formularul de editare
+            ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
+            ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
+            ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Name");
+            ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Name");
+            ViewData["TouristAttractionId"] = new SelectList(_context.Set<TouristAttraction>(), "TouristAttractionId", "Name");
+
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        // Metoda care se apelează atunci când formularul este trimis pentru a salva modificările.
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
 
+            // Actualizăm agenda în contextul bazei de date
             _context.Attach(Agenda).State = EntityState.Modified;
 
             try
@@ -70,6 +76,7 @@ namespace Testare_TravelingApp.Pages.Agendas
             return RedirectToPage("./Index");
         }
 
+        // Verifică dacă o agenda există în baza de date
         private bool AgendaExists(int id)
         {
             return _context.Agenda.Any(e => e.AgendaId == id);

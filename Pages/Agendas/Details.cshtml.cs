@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +27,15 @@ namespace Testare_TravelingApp.Pages.Agendas
                 return NotFound();
             }
 
-            var agenda = await _context.Agenda.FirstOrDefaultAsync(m => m.AgendaId == id);
+            // Căutăm agenda pe baza ID-ului și includem doar entitățile asociate relevante
+            var agenda = await _context.Agenda
+                .Include(a => a.User)
+                .Include(a => a.Activity)
+                .Include(a => a.NatureTrail)
+                .Include(a => a.Restaurant)
+                .Include(a => a.TouristAttraction)
+                .FirstOrDefaultAsync(m => m.AgendaId == id);
+
             if (agenda == null)
             {
                 return NotFound();

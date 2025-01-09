@@ -2,13 +2,13 @@
 @model Testare_TravelingApp.Pages.Agendas.IndexModel
 
 @{
-    ViewData["Title"] = "Agenda";
+    ViewData["Title"] = Model.YourAgenda;
 }
 
-<h1>Your Agenda</h1>
+<h1>@Model.YourAgenda</h1>
 
 <p>
-    <a asp-page="Create" class="btn" style="background-color: lightblue;">Add New Activity</a>
+    <a asp-page="Create" class="btn" style="background-color: lightblue;">@Model.AddActivityButon</a>
 </p>
 
 <div class="row">
@@ -22,37 +22,50 @@
                 </div>
                 <p class="card-body">
                 <p class="card-text mt-1">
-                    <strong>Created at:</strong><span class="text-muted">@item.DateCreated.ToString("MMMM dd, yyyy")</span>
+                    <strong>@Model.CreatedAt</strong>
+                    <span class="text-muted">@item.DateCreated.ToString("MMMM dd, yyyy")</span>
                 </p>
                 <p class="card-text mt-3">
-                    <strong>Created by:</strong> @item.User.Email
+                    <strong>@Model.CreatedBy</strong> @item.User.Email
                 </p>
                 <p>
                         @if (item.Activity != null)
                         {
                         <span class="badge" style="background-color: #c4c1e0;">
-                            Activity: @item.Activity.Name<br />
-                            Starting at: @item.Activity.StartDate
+                                @Model.Activity @item.Activity.Name<br />
+                                @Model.StartingAt: @item.Activity.StartDate
                         </span>
                         }
                         @if (item.Restaurant != null)
                         {
-                        <span class="badge" style="background-color: #c7b198;">Restaurant: @item.Restaurant.Name</span>
+                        <span class="badge" style="background-color: #c7b198;">
+                                @Model.Restaurant: @item.Restaurant.Name
+                        </span>
                         }
                         @if (item.NatureTrail != null)
                         {
-                        <span class="badge" style="background-color: #ffa952;">Nature Trail: @item.NatureTrail.Name</span>
+                        <span class="badge" style="background-color: #ffa952;">
+                                @Model.NatureTrail: @item.NatureTrail.Name
+                        </span>
                         }
                         @if (item.TouristAttraction != null)
                         {
-                        <span class="badge" style="background-color: #ddeedf;">Attraction: @item.TouristAttraction.Name</span>
+                        <span class="badge" style="background-color: #ddeedf;">
+                                @Model.Attraction: @item.TouristAttraction.Name
+                        </span>
                         }
                 </p>
                 </p>
                 <div class="card-footer text-end">
-                    <a asp-page="./Edit" asp-route-id="@item.AgendaId" class="btn btn-sm" style="background-color: pink;">Edit</a>
-                    <a asp-page="./Details" asp-route-id="@item.AgendaId" class="btn btn-sm" style="background-color: sandybrown;">Details</a>
-                    <a asp-page="./Delete" asp-route-id="@item.AgendaId" class="btn btn-danger btn-sm">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@item.AgendaId" class="btn btn-sm" style="background-color: pink;">
+                        @Model.Edit
+                    </a>
+                    <a asp-page="./Details" asp-route-id="@item.AgendaId" class="btn btn-sm" style="background-color: sandybrown;">
+                        @Model.Details
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.AgendaId" class="btn btn-danger btn-sm">
+                        @Model.Delete
+                    </a>
                 </div>
             </div>
         </div>
@@ -61,5 +74,5 @@
 
 @if (!Model.Agenda.Any())
 {
-    <p>No agendas found.</p>
+    <p>@Model.NoAgendasFound</p>
 }

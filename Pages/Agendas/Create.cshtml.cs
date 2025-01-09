@@ -7,32 +7,61 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Identity;
 using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
+using Microsoft.Extensions.Localization;
 
 namespace Testare_TravelingApp.Pages.Agendas
 {
     public class CreateModel : PageModel
     {
-        private readonly Testare_TravelingApp.Data.Testare_TravelingAppContext _context;
+        private readonly Testare_TravelingAppContext _context;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly IStringLocalizer _localizer;
 
-        // Constructorul care primește contextul bazei de date și UserManager pentru a obține utilizatorul curent
-        public CreateModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context, UserManager<IdentityUser> userManager)
+        public CreateModel(Testare_TravelingAppContext context, UserManager<IdentityUser> userManager, IStringLocalizerFactory localizerFactory)
         {
             _context = context;
             _userManager = userManager;
-        }
-
-        // Metoda care se apelează la accesarea paginii pentru a încărca drop-down-urile
-        public IActionResult OnGet()
-        {
-            PopulateDropdowns();
-            return Page();
+            _localizer = localizerFactory.Create("Resources", "Testare_TravelingApp");
         }
 
         [BindProperty]
         public Agenda Agenda { get; set; } = default!;
 
-        // Reîncărcarea dropdown-urilor
+        // Properties for localized strings
+        public string CreateTitle { get; private set; } = string.Empty;
+        public string AgendaLabel { get; private set; } = string.Empty;
+        public string TitleLabel { get; private set; } = string.Empty;
+        public string DateCreatedLabel { get; private set; } = string.Empty;
+        public string ActivityLabel { get; private set; } = string.Empty;
+        public string RestaurantLabel { get; private set; } = string.Empty;
+        public string NatureTrailLabel { get; private set; } = string.Empty;
+        public string TouristAttractionLabel { get; private set; } = string.Empty;
+        public string SelectOption { get; private set; } = string.Empty;
+        public string CreateButtonLabel { get; private set; } = string.Empty;
+        public string BackToListLabel { get; private set; } = string.Empty;
+
+        public IActionResult OnGet()
+        {
+            LoadLocalizedStrings();
+            PopulateDropdowns();
+            return Page();
+        }
+
+        private void LoadLocalizedStrings()
+        {
+            CreateTitle = _localizer["CreateTitle"];
+            AgendaLabel = _localizer["AgendaLabel"];
+            TitleLabel = _localizer["TitleLabel"];
+            DateCreatedLabel = _localizer["DateCreatedLabel"];
+            ActivityLabel = _localizer["ActivityLabel"];
+            RestaurantLabel = _localizer["RestaurantLabel"];
+            NatureTrailLabel = _localizer["NatureTrailLabel"];
+            TouristAttractionLabel = _localizer["TouristAttractionLabel"];
+            SelectOption = _localizer["SelectOption"];
+            CreateButtonLabel = _localizer["CreateButtonLabel"];
+            BackToListLabel = _localizer["BackToListLabel"];
+        }
+
         private void PopulateDropdowns()
         {
             ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
@@ -41,39 +70,29 @@ namespace Testare_TravelingApp.Pages.Agendas
             ViewData["TouristAttractionId"] = new SelectList(_context.Set<TouristAttraction>(), "TouristAttractionId", "Name");
         }
 
-        // Metoda care se execută la postarea formularului
         public async Task<IActionResult> OnPostAsync()
         {
-            // Obține utilizatorul curent din contextul de autentificare
             var user = await _userManager.GetUserAsync(User);
 
             if (user != null)
             {
-                // Căutăm UserId-ul utilizatorului în baza de date pe baza email-ului
                 var currentUser = _context.User.FirstOrDefault(u => u.Email == user.Email);
 
                 if (currentUser != null)
                 {
-                    // Setăm UserId pentru agenda curentă
                     Agenda.UserId = currentUser.UserId;
-
-                    // Adăugăm agenda în contextul bazei de date
                     _context.Agenda.Add(Agenda);
                     await _context.SaveChangesAsync();
-
-                    // După salvare, redirecționăm utilizatorul la pagina cu lista de agende
                     return RedirectToPage("./Index");
                 }
                 else
                 {
-                    // Utilizatorul nu a fost găsit
-                    ModelState.AddModelError("", "User not found");
+                    ModelState.AddModelError("", _localizer["UserNotFound"]);
                     return Page();
                 }
             }
 
-            // Dacă utilizatorul nu este autentificat
-            ModelState.AddModelError("", "User not authenticated");
+            ModelState.AddModelError("", _localizer["UserNotAuthenticated"]);
             return Page();
         }
     }

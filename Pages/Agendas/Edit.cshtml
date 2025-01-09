@@ -2,12 +2,12 @@
 @model Testare_TravelingApp.Pages.Agendas.EditModel
 
 @{
-    ViewData["Title"] = "Edit Agenda";
+    ViewData["Title"] = @Model._localizer["Title_EditAgenda"];
 }
 
-<h1>Edit Agenda</h1>
+<h1>@Model._localizer["Title_EditAgenda"]</h1>
 
-<h4>Agenda</h4>
+<h4>@Model._localizer["Label_Agenda"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -16,62 +16,62 @@
             <input type="hidden" asp-for="Agenda.AgendaId" />
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Agenda.Title" class="control-label"></label>
+                <label asp-for="Agenda.Title" class="control-label">@Model._localizer["Agenda_Title"]</label>
                 <input asp-for="Agenda.Title" class="form-control" />
                 <span asp-validation-for="Agenda.Title" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Agenda.DateCreated" class="control-label"></label>
+                <label asp-for="Agenda.DateCreated" class="control-label">@Model._localizer["Agenda_DateCreated"]</label>
                 <input asp-for="Agenda.DateCreated" type="date" class="form-control" readonly />
                 <span asp-validation-for="Agenda.DateCreated" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.UserId" class="control-label"></label>
+                <label asp-for="Agenda.UserId" class="control-label">@Model._localizer["Agenda_UserId"]</label>
                 <select asp-for="Agenda.UserId" class="form-control" asp-items="ViewBag.UserId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model._localizer["Label_SelectOption"]</option>
                 </select>
                 <span asp-validation-for="Agenda.UserId" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.ActivityId" class="control-label"></label>
+                <label asp-for="Agenda.ActivityId" class="control-label">@Model._localizer["Agenda_ActivityId"]</label>
                 <select asp-for="Agenda.ActivityId" class="form-control" asp-items="ViewBag.ActivityId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model._localizer["Label_SelectOption"]</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.RestaurantId" class="control-label"></label>
+                <label asp-for="Agenda.RestaurantId" class="control-label">@Model._localizer["Agenda_RestaurantId"]</label>
                 <select asp-for="Agenda.RestaurantId" class="form-control" asp-items="ViewBag.RestaurantId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model._localizer["Label_SelectOption"]</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.NatureTrailId" class="control-label"></label>
+                <label asp-for="Agenda.NatureTrailId" class="control-label">@Model._localizer["Agenda_NatureTrailId"]</label>
                 <select asp-for="Agenda.NatureTrailId" class="form-control" asp-items="ViewBag.NatureTrailId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model._localizer["Label_SelectOption"]</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.TouristAttractionId" class="control-label"></label>
+                <label asp-for="Agenda.TouristAttractionId" class="control-label">@Model._localizer["Agenda_TouristAttractionId"]</label>
                 <select asp-for="Agenda.TouristAttractionId" class="form-control" asp-items="ViewBag.TouristAttractionId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model._localizer["Label_SelectOption"]</option>
                 </select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="@Model._localizer["Button_Save"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" class="btn">@Model._localizer["Button_BackToList"]</a>
 </div>
 
 @section Scripts {

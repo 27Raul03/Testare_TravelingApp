@@ -1,21 +1,22 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Humanizer.Localisation;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Testare_TravelingApp.Pages.Agendas
 {
     public class DetailsModel : PageModel
     {
-        private readonly Testare_TravelingApp.Data.Testare_TravelingAppContext _context;
+        private readonly Testare_TravelingAppContext _context;
+        public readonly IStringLocalizer _localizer;
 
-        public DetailsModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context)
+        public DetailsModel(Testare_TravelingAppContext context, IStringLocalizerFactory localizerFactory)
         {
             _context = context;
+            _localizer = localizerFactory.Create("Resources", "Testare_TravelingApp");
         }
 
         public Agenda Agenda { get; set; } = default!;
@@ -27,7 +28,6 @@ namespace Testare_TravelingApp.Pages.Agendas
                 return NotFound();
             }
 
-            // Căutăm agenda pe baza ID-ului și includem doar entitățile asociate relevante
             var agenda = await _context.Agenda
                 .Include(a => a.User)
                 .Include(a => a.Activity)

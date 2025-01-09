@@ -14,16 +14,15 @@ namespace Testare_TravelingApp.Pages.Activities
     public class IndexModel : PageModel
     {
         private readonly Testare_TravelingAppContext _context;
-        private readonly IStringLocalizer _localizer;
-
+        public readonly IStringLocalizer _localizer;
 
         public IndexModel(Testare_TravelingAppContext context, IStringLocalizerFactory localizerFactory)
         {
             _context = context;
             _localizer = localizerFactory.Create("Resources", "Testare_TravelingApp");
         }
-        public string WelcomeMessage { get; private set; } = string.Empty;
-        public IList<Activity> Activity { get;set; } = default!;
+
+        public IList<Activity> Activity { get; set; } = default!;
 
         public async Task OnGetAsync()
         {

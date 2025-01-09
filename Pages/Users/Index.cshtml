@@ -1,13 +1,17 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.Users.IndexModel
 
-<h1>Users List</h1>
+@{
+    ViewData["Title"] = @Model._localizer["Title_Users"];
+}
+
+<h1>@Model._localizer["Title_Users"]</h1>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Email</th>
-            <th>Actions</th>
+            <th>@Model._localizer["Column_Email"]</th>
+            <th>@Model._localizer["Column_Actions"]</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +23,9 @@
                     @if (user.Email == Model.CurrentUserEmail)
                     {
                         <form method="post" asp-page-handler="Delete" asp-route-id="@user.UserId" style="display:inline;">
-                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="submit" class="btn btn-danger">
+                                @Model._localizer["Button_Delete"]
+                            </button>
                         </form>
                     }
                 </td>

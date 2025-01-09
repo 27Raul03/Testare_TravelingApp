@@ -174,4 +174,293 @@
   <data name="CurrentLanguage" xml:space="preserve">
     <value>EN</value>
   </data>
+	<data name="Agenda" xml:space="preserve">
+  <value>Agenda</value>
+</data>
+	<data name="YourAgenda" xml:space="preserve">
+  <value>Your Agenda</value>
+</data>
+	<data name="AddNewActivity" xml:space="preserve">
+  <value>Add New Activity</value>
+</data>
+	<data name="CreatedAt" xml:space="preserve">
+  <value>Created at:</value>
+</data>
+	<data name="CreatedBy" xml:space="preserve">
+  <value>Created by:</value>
+</data>
+	<data name="Activity" xml:space="preserve">
+  <value>Activity:</value>
+</data>
+	<data name="Restaurant" xml:space="preserve">
+  <value>Restaurant:</value>
+</data>
+	<data name="NatureTrail" xml:space="preserve">
+  <value>Nature Trail:</value>
+</data>
+	<data name="TouristAttraction" xml:space="preserve">
+  <value>Attraction:</value>
+</data>
+	<data name="Edit" xml:space="preserve">
+  <value>Edit</value>
+</data>
+	<data name="Details" xml:space="preserve">
+  <value>Details</value>
+</data>
+	<data name="Delete" xml:space="preserve">
+  <value>Delete</value>
+</data>
+	<data name="NoAgendasFound" xml:space="preserve">
+  <value>No agendas found.</value>
+</data>
+	<data name="CreateTitle" xml:space="preserve">
+  <value>Create</value>
+</data>
+	<data name="AgendaLabel" xml:space="preserve">
+  <value>Agenda</value>
+</data>
+	<data name="TitleLabel" xml:space="preserve">
+  <value>Title</value>
+</data>
+	<data name="DateCreatedLabel" xml:space="preserve">
+  <value>Date Created</value>
+</data>
+	<data name="ActivityLabel" xml:space="preserve">
+  <value>Activity</value>
+</data>
+	<data name="RestaurantLabel" xml:space="preserve">
+  <value>Restaurant</value>
+</data>
+	<data name="NatureTrailLabel" xml:space="preserve">
+  <value>Nature Trail</value>
+</data>
+	<data name="TouristAttractionLabel" xml:space="preserve">
+  <value>Tourist Attraction</value>
+</data>
+	<data name="SelectOption" xml:space="preserve">
+  <value>Please select...</value>
+</data>
+	<data name="CreateButtonLabel" xml:space="preserve">
+  <value>Create</value>
+</data>
+	<data name="BackToListLabel" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+	<data name="UserNotFound" xml:space="preserve">
+  <value>User not found</value>
+</data>
+	<data name="UserNotAuthenticated" xml:space="preserve">
+  <value>User not authenticated</value>
+</data>
+	<data name="Title_Activities" xml:space="preserve">
+    <value>Activities</value>
+</data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Create New</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+    <value>Name</value>
+</data>
+	<data name="Column_Description" xml:space="preserve">
+    <value>Description</value>
+</data>
+	<data name="Column_Location" xml:space="preserve">
+    <value>Location</value>
+</data>
+	<data name="Column_StartDate" xml:space="preserve">
+    <value>Start Date</value>
+</data>
+	<data name="Column_EndDate" xml:space="preserve">
+    <value>End Date</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+    <value>Edit</value>
+</data>
+	<data name="Button_Details" xml:space="preserve">
+    <value>Details</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+    <value>Delete</value>
+</data>
+	<data name="CreateActivity" xml:space="preserve">
+  <value>Create Activity</value>
+</data>
+	<data name="ActivityName" xml:space="preserve">
+  <value>Activity Name</value>
+</data>
+	<data name="ActivityDescription" xml:space="preserve">
+  <value>Activity Description</value>
+</data>
+	<data name="ActivityLocation" xml:space="preserve">
+  <value>Activity Location</value>
+</data>
+	<data name="ActivityStartDate" xml:space="preserve">
+  <value>Start Date</value>
+</data>
+	<data name="ActivityEndDate" xml:space="preserve">
+  <value>End Date</value>
+</data>
+	<data name="CreateButton" xml:space="preserve">
+  <value>Create</value>
+</data>
+	<data name="BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Title_Delete" xml:space="preserve">
+  <value>Delete Activity</value>
+</data>
+<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Are you sure you want to delete this activity?</value>
+</data>
+<data name="Label_Activity" xml:space="preserve">
+  <value>Activity</value>
+</data>
+<data name="Button_Delete" xml:space="preserve">
+  <value>Delete</value>
+</data>
+<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Title_Details" xml:space="preserve">
+  <value>Activity Details</value>
+</data>
+<data name="Label_Activity" xml:space="preserve">
+  <value>Activity</value>
+</data>
+<data name="Button_Edit" xml:space="preserve">
+  <value>Edit</value>
+</data>
+<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Title_Edit" xml:space="preserve">
+  <value>Edit Activity</value>
+</data>
+<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Label_Required" xml:space="preserve">
+  <value>*</value>
+</data>
+<data name="Validation_Error" xml:space="preserve">
+  <value>Validation error occurred.</value>
+</data>
+<data name="Title_DetailsAgenda" xml:space="preserve">
+  <value>Agenda Details</value>
+</data>
+<data name="Label_Agenda" xml:space="preserve">
+  <value>Agenda</value>
+</data>
+<data name="Label_Title" xml:space="preserve">
+  <value>Title</value>
+</data>
+<data name="Label_DateCreated" xml:space="preserve">
+  <value>Date Created</value>
+</data>
+<data name="Label_User" xml:space="preserve">
+  <value>User</value>
+</data>
+<data name="Label_Activity" xml:space="preserve">
+  <value>Activity</value>
+</data>
+<data name="Label_Restaurant" xml:space="preserve">
+  <value>Restaurant</value>
+</data>
+<data name="Label_TouristAttraction" xml:space="preserve">
+  <value>Tourist Attraction</value>
+</data>
+<data name="Label_NatureTrail" xml:space="preserve">
+  <value>Nature Trail</value>
+</data>
+<data name="Button_Edit" xml:space="preserve">
+  <value>Edit</value>
+</data>
+<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Title_Delete" xml:space="preserve">
+  <value>Delete</value>
+</data>
+<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Are you sure you want to delete this?</value>
+</data>
+<data name="Label_Agenda" xml:space="preserve">
+  <value>Agenda</value>
+</data>
+<data name="Agenda_Title" xml:space="preserve">
+  <value>Title</value>
+</data>
+<data name="Agenda_DateCreated" xml:space="preserve">
+  <value>Date Created</value>
+</data>
+<data name="Agenda_User" xml:space="preserve">
+  <value>User</value>
+</data>
+<data name="Button_Delete" xml:space="preserve">
+  <value>Delete</value>
+</data>
+<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Title_EditAgenda" xml:space="preserve">
+  <value>Edit Agenda</value>
+</data>
+<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+<data name="Label_SelectOption" xml:space="preserve">
+  <value>Please select...</value>
+</data>
+	<data name="Title_EditAgenda" xml:space="preserve">
+  <value>Edit Agenda</value>
+</data>
+	<data name="Label_Agenda" xml:space="preserve">
+  <value>Agenda</value>
+</data>
+	<data name="Label_SelectOption" xml:space="preserve">
+  <value>Please select...</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+	<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+	<data name="Agenda_Title" xml:space="preserve">
+  <value>Title</value>
+</data>
+	<data name="Agenda_DateCreated" xml:space="preserve">
+  <value>Date Created</value>
+</data>
+	<data name="Agenda_UserId" xml:space="preserve">
+  <value>User</value>
+</data>
+	<data name="Agenda_ActivityId" xml:space="preserve">
+  <value>Activity</value>
+</data>
+	<data name="Agenda_RestaurantId" xml:space="preserve">
+  <value>Restaurant</value>
+</data>
+	<data name="Agenda_NatureTrailId" xml:space="preserve">
+  <value>Nature Trail</value>
+</data>
+	<data name="Agenda_TouristAttractionId" xml:space="preserve">
+  <value>Tourist Attraction</value>
+</data>
+	<data name="Title_Users" xml:space="preserve">
+  <value>Users List</value>
+</data>
+	<data name="Column_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Column_Actions" xml:space="preserve">
+  <value>Actions</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+  <value>Delete</value>
+</data>
+
 </root>

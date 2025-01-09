@@ -26,18 +26,38 @@ namespace Testare_TravelingApp.Pages.Agendas
 
         public string YourAgenda { get; private set; } = string.Empty;
         public string AddActivityButon { get; private set; } = string.Empty;
+        public string CreatedAt { get; private set; } = string.Empty;
+        public string CreatedBy { get; private set; } = string.Empty;
+        public string Activity { get; private set; } = string.Empty;
+        public string StartingAt { get; private set; } = string.Empty;
+        public string Restaurant { get; private set; } = string.Empty;
+        public string NatureTrail { get; private set; } = string.Empty;
+        public string Attraction { get; private set; } = string.Empty;
+        public string Edit { get; private set; } = string.Empty;
+        public string Details { get; private set; } = string.Empty;
+        public string Delete { get; private set; } = string.Empty;
+        public string NoAgendasFound { get; private set; } = string.Empty;
 
         public async Task OnGetAsync()
         {
-
             YourAgenda = _localizer["YourAgenda"];
             AddActivityButon = _localizer["AddActivityButon"];
-            // Obține utilizatorul logat
+            CreatedAt = _localizer["CreatedAt"];
+            CreatedBy = _localizer["CreatedBy"];
+            Activity = _localizer["Activity"];
+            StartingAt = _localizer["StartingAt"];
+            Restaurant = _localizer["Restaurant"];
+            NatureTrail = _localizer["NatureTrail"];
+            Attraction = _localizer["Attraction"];
+            Edit = _localizer["Edit"];
+            Details = _localizer["Details"];
+            Delete = _localizer["Delete"];
+            NoAgendasFound = _localizer["NoAgendasFound"];
+
             var user = await _userManager.GetUserAsync(User);
 
             if (user != null)
             {
-                // Filtrează agendele pe baza UserId-ului utilizatorului logat
                 Agenda = await _context.Agenda
                     .Include(r => r.Activity)
                     .Include(r => r.NatureTrail)
@@ -49,7 +69,6 @@ namespace Testare_TravelingApp.Pages.Agendas
             }
             else
             {
-                // Dacă utilizatorul nu este logat, returnează un set de date gol
                 Agenda = new List<Agenda>();
             }
         }

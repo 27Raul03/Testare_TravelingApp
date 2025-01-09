@@ -153,4 +153,13 @@
   <data name="CurrentLanguage" xml:space="preserve">
     <value>EN</value>
   </data>
+  <data name="ListName" xml:space="preserve">
+    <value>Users List</value>
+  </data>
+  <data name="ActionTableName" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ActivityPage" xml:space="preserve">
+    <value>Activities</value>
+  </data>
 </root>

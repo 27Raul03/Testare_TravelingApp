@@ -7,16 +7,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
+using Microsoft.Extensions.Localization;
+
 
 namespace Testare_TravelingApp.Pages.Users
 {
     public class IndexModel : PageModel
     {
+        private readonly IStringLocalizer _localizer;
         private readonly Testare_TravelingAppContext _context;
 
-        public IndexModel(Testare_TravelingAppContext context)
+        public IndexModel(Testare_TravelingAppContext context, IStringLocalizerFactory localizerFactory)
         {
             _context = context;
+            _localizer = localizerFactory.Create("Resources", "Testare_TravelingApp");
         }
 
         // Lista utilizatorilor din baza de date
@@ -59,5 +63,33 @@ namespace Testare_TravelingApp.Pages.Users
 
             return RedirectToPage();
         }
+
+        public string WelcomeMessage { get; private set; } = string.Empty;
+        public string SubText { get; private set; } = string.Empty;
+        public string StartPlanningText { get; private set; } = string.Empty;
+        public string ItineraryPlanning { get; private set; } = string.Empty;
+        public string ItineraryDescription { get; private set; } = string.Empty;
+        public string TravelGuides { get; private set; } = string.Empty;
+        public string TravelGuidesDescription { get; private set; } = string.Empty;
+        public string TrackProgress { get; private set; } = string.Empty;
+        public string TrackProgressDescription { get; private set; } = string.Empty;
+        public string WhyChooseTitle { get; private set; } = string.Empty;
+        public string WhyChooseDescription { get; private set; } = string.Empty;
+
+        public void OnGet()
+        {
+            WelcomeMessage = _localizer["WelcomeMessage"];
+            SubText = _localizer["SubText"];
+            StartPlanningText = _localizer["StartPlanningText"];
+            ItineraryPlanning = _localizer["ItineraryPlanning"];
+            ItineraryDescription = _localizer["ItineraryDescription"];
+            TravelGuides = _localizer["TravelGuides"];
+            TravelGuidesDescription = _localizer["TravelGuidesDescription"];
+            TrackProgress = _localizer["TrackProgress"];
+            TrackProgressDescription = _localizer["TrackProgressDescription"];
+            WhyChooseTitle = _localizer["WhyChooseTitle"];
+            WhyChooseDescription = _localizer["WhyChooseDescription"];
+        }
+
     }
 }

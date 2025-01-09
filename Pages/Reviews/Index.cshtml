@@ -2,20 +2,21 @@
 @model Testare_TravelingApp.Pages.Reviews.IndexModel
 
 @{
-    ViewData["Title"] = "Reviews";
+    ViewData["Title"] = @Model._localizer["Title_Reviews"];
 }
 
-<h1>Reviews</h1>
+<h1>@Model._localizer["Title_Reviews"]</h1>
 
 <p>
-    <a asp-page="Create" class="btn" style="background-color:lightblue">Add Review</a>
+    <a asp-page="Create" class="btn" style="background-color: lightblue;">
+        @Model._localizer["Button_AddReview"]
+    </a>
 </p>
 
 <div class="row">
     <hr />
     @foreach (var item in Model.Review)
     {
-       
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-header">
@@ -23,35 +24,51 @@
                 </div>
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
-                        <span class="badge text-dark" style="background-color:khaki">@item.Rating / 5</span>
+                        <span class="badge text-dark" style="background-color:khaki">
+                            @item.Rating / 5
+                        </span>
                         <span class="text-muted">@item.DatePosted.ToString("MMMM dd, yyyy")</span>
                     </div>
                     <p class="card-text mt-3">
-                        <strong>Comment:</strong> @item.Comment
+                        <strong>@Model._localizer["Label_Comment"]</strong> @item.Comment
                     </p>
                     <p>
                         @if (item.Activity != null)
                         {
-                            <span class="badge" style="background-color:#c4c1e0">Activity: @item.Activity.Name</span>
+                            <span class="badge" style="background-color:#c4c1e0">
+                                @Model._localizer["Badge_Activity"] @item.Activity.Name
+                            </span>
                         }
                         @if (item.Restaurant != null)
                         {
-                            <span class="badge" style="background-color:#c7b198">Restaurant: @item.Restaurant.Name</span>
+                            <span class="badge" style="background-color:#c7b198">
+                                @Model._localizer["Badge_Restaurant"] @item.Restaurant.Name
+                            </span>
                         }
                         @if (item.NatureTrail != null)
                         {
-                            <span class="badge" style="background-color:#ffa952">Nature Trail: @item.NatureTrail.Name</span>
+                            <span class="badge" style="background-color:#ffa952">
+                                @Model._localizer["Badge_NatureTrail"] @item.NatureTrail.Name
+                            </span>
                         }
                         @if (item.TouristAttraction != null)
                         {
-                            <span class="badge" style="background-color:#ddeedf">Attraction: @item.TouristAttraction.Name</span>
+                            <span class="badge" style="background-color:#ddeedf">
+                                @Model._localizer["Badge_Attraction"] @item.TouristAttraction.Name
+                            </span>
                         }
                     </p>
                 </div>
                 <div class="card-footer text-end">
-                    <a asp-page="./Edit" asp-route-id="@item.ReviewId" class="btn btn-sm" style="background-color:pink">Edit</a>
-                    <a asp-page="./Details" asp-route-id="@item.ReviewId" class="btn btn-sm" style="background-color:sandybrown">Details</a>
-                    <a asp-page="./Delete" asp-route-id="@item.ReviewId" class="btn btn-danger btn-sm">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@item.ReviewId" class="btn btn-sm" style="background-color:pink;">
+                        @Model._localizer["Button_Edit"]
+                    </a>
+                    <a asp-page="./Details" asp-route-id="@item.ReviewId" class="btn btn-sm" style="background-color:sandybrown;">
+                        @Model._localizer["Button_Details"]
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.ReviewId" class="btn btn-danger btn-sm">
+                        @Model._localizer["Button_Delete"]
+                    </a>
                 </div>
             </div>
         </div>

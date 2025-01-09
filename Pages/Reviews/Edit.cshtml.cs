@@ -1,21 +1,22 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
 
 namespace Testare_TravelingApp.Pages.Reviews
 {
     public class EditModel : PageModel
     {
-        private readonly Testare_TravelingApp.Data.Testare_TravelingAppContext _context;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly Testare_TravelingAppContext _context;
+        public readonly IStringLocalizer _localizer;
 
-        public EditModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context, UserManager<IdentityUser> userManager)
+        public EditModel(Testare_TravelingAppContext context, IStringLocalizerFactory localizerFactory)
         {
             _context = context;
-            _userManager = userManager;
+            _localizer = localizerFactory.Create("Resources", "Testare_TravelingApp");
         }
 
         [BindProperty]
@@ -28,52 +29,27 @@ namespace Testare_TravelingApp.Pages.Reviews
                 return NotFound();
             }
 
-            var review = await _context.Review
-                .Include(r => r.User) // Include pentru a accesa email-ul
-                .FirstOrDefaultAsync(m => m.ReviewId == id);
+            Review = await _context.Review.FindAsync(id);
 
-            if (review == null)
+            if (Review == null)
             {
                 return NotFound();
             }
 
-            // Obține utilizatorul logat
-            var currentUser = await _userManager.GetUserAsync(User);
-
-            // Verifică dacă utilizatorul logat are permisiunea de editare
-            if (currentUser == null || review.User.Email != currentUser.Email)
-            {
-                return RedirectToPage("/Error", new { errorMessage = "Doar autorul review-ului poate edita" }); 
-            }
-
-            Review = review;
             ViewData["ActivityId"] = new SelectList(_context.Set<Activity>(), "ActivityId", "Name");
             ViewData["NatureTrailId"] = new SelectList(_context.Set<NatureTrail>(), "NatureTrailId", "Name");
             ViewData["RestaurantId"] = new SelectList(_context.Set<Restaurant>(), "RestaurantId", "Name");
             ViewData["TouristAttractionId"] = new SelectList(_context.TouristAttraction, "TouristAttractionId", "Name");
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "Email");
+
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            // Obține review-ul din baza de date pentru verificare
-            var review = await _context.Review
-                .Include(r => r.User) // Include pentru a accesa email-ul
-                .FirstOrDefaultAsync(m => m.ReviewId == Review.ReviewId);
-
-            if (review == null)
+            if (!ModelState.IsValid)
             {
-                return NotFound();
-            }
-
-            // Obține utilizatorul logat
-            var currentUser = await _userManager.GetUserAsync(User);
-
-            // Verifică dacă utilizatorul logat are permisiunea de editare
-            if (currentUser == null || review.User.Email != currentUser.Email)
-            {
-                return Forbid(); // Sau return RedirectToPage("/Error", new { message = "Unauthorized access" });
+                return Page();
             }
 
             _context.Attach(Review).State = EntityState.Modified;

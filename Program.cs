@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
 builder.Services.AddDbContext<Testare_TravelingAppContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Testare_TravelingAppContext")
     ?? throw new InvalidOperationException("Connection string 'Testare_TravelingAppContext' not found.")));
@@ -25,6 +27,14 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
+
+var supportedCultures = new[] { "en", "ro" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture("en")
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
 
 if (!app.Environment.IsDevelopment())
 {

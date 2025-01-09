@@ -9,7 +9,6 @@ using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
 using Microsoft.Extensions.Localization;
 
-
 namespace Testare_TravelingApp.Pages.Users
 {
     public class IndexModel : PageModel
@@ -29,6 +28,12 @@ namespace Testare_TravelingApp.Pages.Users
         // Email-ul utilizatorului conectat
         public string CurrentUserEmail { get; set; } = string.Empty;
 
+        // Proprietăți pentru mesaje localizate
+        public string ListName { get; private set; } = string.Empty;
+        public string Email { get; private set; } = string.Empty;
+        public string ActionTableName { get; private set; } = string.Empty;
+
+
         public async Task OnGetAsync()
         {
             // Obține email-ul utilizatorului conectat
@@ -36,6 +41,12 @@ namespace Testare_TravelingApp.Pages.Users
 
             // Obține lista utilizatorilor din baza de date
             UserList = await _context.User.ToListAsync();
+
+            // Setează mesajele localizate
+            ListName = _localizer["ListName"];
+            Email = _localizer["Email"];
+            ActionTableName = _localizer["ActionTableName"];
+      
         }
 
         public async Task<IActionResult> OnPostDeleteAsync(int id)
@@ -63,33 +74,5 @@ namespace Testare_TravelingApp.Pages.Users
 
             return RedirectToPage();
         }
-
-        public string WelcomeMessage { get; private set; } = string.Empty;
-        public string SubText { get; private set; } = string.Empty;
-        public string StartPlanningText { get; private set; } = string.Empty;
-        public string ItineraryPlanning { get; private set; } = string.Empty;
-        public string ItineraryDescription { get; private set; } = string.Empty;
-        public string TravelGuides { get; private set; } = string.Empty;
-        public string TravelGuidesDescription { get; private set; } = string.Empty;
-        public string TrackProgress { get; private set; } = string.Empty;
-        public string TrackProgressDescription { get; private set; } = string.Empty;
-        public string WhyChooseTitle { get; private set; } = string.Empty;
-        public string WhyChooseDescription { get; private set; } = string.Empty;
-
-        public void OnGet()
-        {
-            WelcomeMessage = _localizer["WelcomeMessage"];
-            SubText = _localizer["SubText"];
-            StartPlanningText = _localizer["StartPlanningText"];
-            ItineraryPlanning = _localizer["ItineraryPlanning"];
-            ItineraryDescription = _localizer["ItineraryDescription"];
-            TravelGuides = _localizer["TravelGuides"];
-            TravelGuidesDescription = _localizer["TravelGuidesDescription"];
-            TrackProgress = _localizer["TrackProgress"];
-            TrackProgressDescription = _localizer["TrackProgressDescription"];
-            WhyChooseTitle = _localizer["WhyChooseTitle"];
-            WhyChooseDescription = _localizer["WhyChooseDescription"];
-        }
-
     }
 }

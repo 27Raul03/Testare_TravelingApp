@@ -150,9 +150,6 @@
   <data name="WhyChooseDescription" xml:space="preserve">
     <value>Cu MyTravelFriend, îți poți planifica călătoria eficient, economisind timp și creând amintiri de neuitat!</value>
   </data>
-  <data name="CurrentLanguage" xml:space="preserve">
-    <value>RO</value>
-  </data>
   <data name="ListName" xml:space="preserve">
     <value>Lista utilizatorilor</value>
   </data>
@@ -161,5 +158,20 @@
   </data>
   <data name="ActivityPage" xml:space="preserve">
     <value>Activități</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="YourAgenda" xml:space="preserve">
+    <value>Agenda ta</value>
+  </data>
+  <data name="AddActivityButon" xml:space="preserve">
+    <value>Adaugă activitate nouă</value>
+  </data>
+  <data name="AttractionsTitle" xml:space="preserve">
+    <value>Atracții</value>
+  </data>
+  <data name="CurrentLanguage" xml:space="preserve">
+    <value>RO</value>
   </data>
 </root>

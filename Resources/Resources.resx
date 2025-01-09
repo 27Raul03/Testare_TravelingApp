@@ -142,16 +142,13 @@
     <value>Track Your Progress</value>
   </data>
   <data name="TrackProgressDescription" xml:space="preserve">
-    <value> Keep track of your plans and share with your friends.</value>
+    <value>Keep track of your plans and share with your friends.</value>
   </data>
   <data name="WhyChooseTitle" xml:space="preserve">
     <value>Why Choose MyTravelFriend?</value>
   </data>
   <data name="WhyChooseDescription" xml:space="preserve">
     <value>With MyTravelFriend, you can plan your trip efficiently, save time, and make memories that last a lifetime!</value>
-  </data>
-  <data name="CurrentLanguage" xml:space="preserve">
-    <value>EN</value>
   </data>
   <data name="ListName" xml:space="preserve">
     <value>Users List</value>
@@ -161,5 +158,20 @@
   </data>
   <data name="ActivityPage" xml:space="preserve">
     <value>Activities</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="YourAgenda" xml:space="preserve">
+    <value>Your Agenda</value>
+  </data>
+  <data name="AddActivityButon" xml:space="preserve">
+    <value>Add New Activity</value>
+  </data>
+  <data name="AttractionsTitle" xml:space="preserve">
+    <value>Attractions</value>
+  </data>
+  <data name="CurrentLanguage" xml:space="preserve">
+    <value>EN</value>
   </data>
 </root>

@@ -117,18 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TravelGuides" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Bienvenue sur MyTravelFriend</value>
   </data>
-  <data name="TrackProgress" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="SubText" xml:space="preserve">
+    <value>Votre destination pour planifier et organiser vos voyages avec facilité.</value>
+  </data>
+  <data name="StartPlanningText" xml:space="preserve">
+    <value>Commencez à planifier votre voyage</value>
+  </data>
+  <data name="ItineraryPlanning" xml:space="preserve">
+    <value>Planification de l'itinéraire</value>
+  </data>
+  <data name="ItineraryDescription" xml:space="preserve">
+    <value>Planifiez votre voyage complet, des destinations aux activités.</value>
+  </data>
+  <data name="TravelGuides" xml:space="preserve">
+    <value>Guides de voyage</value>
+  </data>
+  <data name="TravelGuidesDescription" xml:space="preserve">
+    <value>Obtenez des conseils et des recommandations utiles pour vos voyages.</value>
+  </data>
+  <data name="TrackProgress" xml:space="preserve">
+    <value>Suivez vos progrès</value>
   </data>
   <data name="TrackProgressDescription" xml:space="preserve">
-    <value />
+    <value>Gardez une trace de vos plans et partagez-les avec vos amis.</value>
   </data>
-  <data name="WhyChooseTitle" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="WhyChooseTitle" xml:space="preserve">
+    <value>Pourquoi choisir MyTravelFriend ?</value>
+  </data>
+  <data name="WhyChooseDescription" xml:space="preserve">
+    <value>Avec MyTravelFriend, planifiez efficacement votre voyage, économisez du temps et créez des souvenirs inoubliables !</value>
+  </data>
+  <data name="ListName" xml:space="preserve">
+    <value>Liste des utilisateurs</value>
+  </data>
+  <data name="ActionTableName" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ActivityPage" xml:space="preserve">
+    <value>Activités</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="AddActivityButon" xml:space="preserve">
+    <value>Ajouter une nouvelle activité</value>
+  </data>
+  <data name="YourAgenda" xml:space="preserve">
+    <value>Votre agenda</value>
+  </data>
+  <data name="AttractionsTitle" xml:space="preserve">
+    <value>Attraits</value>
   </data>
   <data name="CurrentLanguage" xml:space="preserve">
     <value>FR</value>

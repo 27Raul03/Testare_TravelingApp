@@ -28,7 +28,7 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-var supportedCultures = new[] { "en", "ro","fr" };
+var supportedCultures = new[] { "en", "ro", "fr"};
 var localizationOptions = new RequestLocalizationOptions()
     .SetDefaultCulture("en")
     .AddSupportedCultures(supportedCultures)

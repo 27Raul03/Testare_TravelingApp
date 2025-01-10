@@ -576,5 +576,214 @@
 	<data name="Button_BackToList" xml:space="preserve">
   <value>Înapoi la Listă</value>
 </data>
+	<data name="Title_Restaurants" xml:space="preserve">
+  <value>Restaurante</value>
+</data>
+	<data name="Button_CreateNew" xml:space="preserve">
+  <value>Creează Nou</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Nume</value>
+</data>
+	<data name="Column_Address" xml:space="preserve">
+  <value>Adresă</value>
+</data>
+	<data name="Column_PhoneNumber" xml:space="preserve">
+  <value>Număr de telefon</value>
+</data>
+	<data name="Column_Cuisine" xml:space="preserve">
+  <value>Tip de bucătărie</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Editează</value>
+</data>
+	<data name="Button_Details" xml:space="preserve">
+  <value>Detalii</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+  <value>Șterge</value>
+</data>
+	<data name="Title_NatureTrails" xml:space="preserve">
+  <value>Trasee Naturale</value>
+</data>
+	<data name="Button_CreateNew" xml:space="preserve">
+  <value>Creează Nou</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Nume</value>
+</data>
+	<data name="Column_Description" xml:space="preserve">
+  <value>Descriere</value>
+</data>
+	<data name="Column_Location" xml:space="preserve">
+  <value>Locație</value>
+</data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+  <value>Lungime (Km)</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Editează</value>
+</data>
+	<data name="Button_Details" xml:space="preserve">
+  <value>Detalii</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+  <value>Șterge</value>
+</data>
+	<data name="Title_TouristAttractions" xml:space="preserve">
+  <value>Atracții Turistice</value>
+</data>
+	<data name="Button_CreateNew" xml:space="preserve">
+  <value>Creează Nou</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Nume</value>
+</data>
+	<data name="Column_Description" xml:space="preserve">
+  <value>Descriere</value>
+</data>
+	<data name="Column_Location" xml:space="preserve">
+  <value>Locație</value>
+</data>
+	<data name="Column_OpeningHours" xml:space="preserve">
+  <value>Ore de Deschidere</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Editează</value>
+</data>
+	<data name="Button_Details" xml:space="preserve">
+  <value>Detalii</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+  <value>Șterge</value>
+</data>
+	<data name="Menu_Users" xml:space="preserve">
+  <value>Utilizatori</value>
+</data>
+	<data name="Menu_Agenda" xml:space="preserve">
+  <value>Agendă</value>
+</data>
+	<data name="Menu_Activities" xml:space="preserve">
+  <value>Activități</value>
+</data>
+	<data name="Menu_Restaurants" xml:space="preserve">
+  <value>Restaurante</value>
+</data>
+	<data name="Menu_NatureTrails" xml:space="preserve">
+  <value>Trasee Naturale</value>
+</data>
+	<data name="Menu_Reviews" xml:space="preserve">
+  <value>Recenzii</value>
+</data>
+	<data name="Menu_TouristAttractions" xml:space="preserve">
+  <value>Atracții Turistice</value>
+</data>
+	<data name="Menu_Help" xml:space="preserve">
+  <value>Ajutor</value>
+</data>
+	<data name="Menu_Privacy" xml:space="preserve">
+  <value>Confidențialitate</value>
+</data>
+	<data name="Menu_Hello" xml:space="preserve">
+  <value>Salut</value>
+</data>
+	<data name="Menu_Logout" xml:space="preserve">
+  <value>Deconectare</value>
+</data>
+	<data name="Menu_Register" xml:space="preserve">
+  <value>Înregistrare</value>
+</data>
+	<data name="Menu_Login" xml:space="preserve">
+  <value>Autentificare</value>
+</data>
+	<data name="Menu_Manage" xml:space="preserve">
+  <value>Administrare</value>
+</data>
+	<data name="Title_Register" xml:space="preserve">
+  <value>Înregistrare</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>nume@exemplu.com</value>
+</data>
+	<data name="Label_Password" xml:space="preserve">
+  <value>Parolă</value>
+</data>
+	<data name="Placeholder_Password" xml:space="preserve">
+  <value>Introduceți parola</value>
+</data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+  <value>Confirmă Parola</value>
+</data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+  <value>Re-introduceți parola</value>
+</data>
+	<data name="Button_Register" xml:space="preserve">
+  <value>Înregistrare</value>
+</data>
+	<data name="Title_Login" xml:space="preserve">
+  <value>Autentificare</value>
+</data>
+
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>nume@exemplu.com</value>
+</data>
+
+	<data name="Label_Password" xml:space="preserve">
+  <value>Parolă</value>
+</data>
+	<data name="Placeholder_Password" xml:space="preserve">
+  <value>Introduceți parola</value>
+</data>
+
+	<data name="Label_RememberMe" xml:space="preserve">
+  <value>Ține-mă minte</value>
+</data>
+
+	<data name="Button_Login" xml:space="preserve">
+  <value>Autentificare</value>
+</data>
+
+	<data name="Link_ForgotPassword" xml:space="preserve">
+  <value>Ai uitat parola?</value>
+</data>
+	<data name="Link_RegisterNewUser" xml:space="preserve">
+  <value>Înregistrează un utilizator nou</value>
+</data>
+	<data name="Link_ResendEmailConfirmation" xml:space="preserve">
+  <value>Retrimite confirmarea pe email</value>
+</data>
+	<!-- Pentru ResendEmailConfirmation -->
+	<data name="Title_ResendEmailConfirmation" xml:space="preserve">
+  <value>Retrimite confirmarea pe email</value>
+</data>
+
+	<!-- Pentru ForgotPassword -->
+	<data name="Title_ForgotPassword" xml:space="preserve">
+  <value>Ți-ai uitat parola?</value>
+</data>
+
+	<!-- Elemente comune ambele pagini -->
+	<data name="Heading_EnterYourEmail" xml:space="preserve">
+  <value>Introduce-ți email-ul</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>nume@exemplu.com</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+
+	<data name="Button_Resend" xml:space="preserve">
+  <value>Retrimite</value>
+</data>
+	<data name="Button_ResetPassword" xml:space="preserve">
+  <value>Resetează Parola</value>
+</data>
 
 </root>

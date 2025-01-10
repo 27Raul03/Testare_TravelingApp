@@ -58,16 +58,42 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="languageDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="?culture=en&ui-culture=en">English</a>
+                                    <a class="dropdown-item" data-lang="en" href="#">English</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="?culture=ro&ui-culture=ro">Română</a>
+                                    <a class="dropdown-item" data-lang="ro" href="#">Română</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="?culture=fr&ui-culture=fr">Français</a>
+                                    <a class="dropdown-item" data-lang="fr" href="#">Français</a>
                                 </li>
                             </ul>
                         </li>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const dropdownItems = document.querySelectorAll(".dropdown-item");
+                                const currentUrl = new URL(window.location.href); // Obținem URL-ul curent
+                                const idParam = currentUrl.searchParams.get("id"); // Obținem parametrul 'id' dacă există
+
+                                dropdownItems.forEach(item => {
+                                    const lang = item.getAttribute("data-lang");
+                                    const basePath = currentUrl.pathname; // Obținem calea URL-ului curent
+                                    const searchParams = new URLSearchParams(currentUrl.search); // Obținem toți parametrii din query
+
+                                    // Adăugăm `culture` și `ui-culture` în query
+                                    searchParams.set("culture", lang);
+                                    searchParams.set("ui-culture", lang);
+
+                                    // Construim noul URL
+                                    const newUrl = idParam
+                                        ? `${basePath}?${searchParams.toString()}` // Cu id
+                                        : `${basePath}?${searchParams.toString()}`; // Fără id
+
+                                    item.href = newUrl; // Setăm href-ul pentru fiecare limbă
+                                });
+                            });
+                        </script>
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

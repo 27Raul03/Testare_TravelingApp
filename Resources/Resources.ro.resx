@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+  -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+
+	<!-- ResHeader standard -->
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<!-- Contenutul traducerilor (fara intrari 100% duplicat) -->
+	<data name="WelcomeMessage" xml:space="preserve">
+    <value>Bun venit pe MyTravelFriend</value>
+  </data>
+	<data name="SubText" xml:space="preserve">
+    <value>Destinația ta pentru a planifica și organiza călătoriile cu ușurință.</value>
+  </data>
+	<data name="StartPlanningText" xml:space="preserve">
+    <value>Începe să-ți planifici călătoria</value>
+  </data>
+	<data name="ItineraryPlanning" xml:space="preserve">
+    <value>Planificarea itinerariului</value>
+  </data>
+	<data name="ItineraryDescription" xml:space="preserve">
+    <value>Planifică-ți întreaga călătorie, de la destinații la activități.</value>
+  </data>
+	<data name="TravelGuides" xml:space="preserve">
+    <value>Ghiduri de călătorie</value>
+  </data>
+	<data name="TravelGuidesDescription" xml:space="preserve">
+    <value>Obține sfaturi și recomandări utile pentru călătoriile tale.</value>
+  </data>
+	<data name="TrackProgress" xml:space="preserve">
+    <value>Urmărește-ți progresul</value>
+  </data>
+	<data name="TrackProgressDescription" xml:space="preserve">
+    <value>Ține evidența planurilor tale și împărtășește-le cu prietenii.</value>
+  </data>
+	<data name="WhyChooseTitle" xml:space="preserve">
+    <value>De ce să alegi MyTravelFriend?</value>
+  </data>
+	<data name="WhyChooseDescription" xml:space="preserve">
+    <value>Cu MyTravelFriend, îți poți planifica călătoria eficient, economisind timp și creând amintiri de neuitat!</value>
+  </data>
+	<data name="ListName" xml:space="preserve">
+    <value>Lista utilizatorilor</value>
+  </data>
+	<data name="ActionTableName" xml:space="preserve">
+    <value>Acțiuni</value>
+  </data>
+	<data name="ActivityPage" xml:space="preserve">
+    <value>Activități</value>
+  </data>
+	<data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+	<data name="YourAgenda" xml:space="preserve">
+    <value>Agenda ta</value>
+  </data>
+	<data name="AddActivityButon" xml:space="preserve">
+    <value>Adaugă activitate nouă</value>
+  </data>
+	<data name="AttractionsTitle" xml:space="preserve">
+    <value>Atracții</value>
+  </data>
+	<data name="CurrentLanguage" xml:space="preserve">
+    <value>RO</value>
+  </data>
+
+	<!-- Agenda & elemente conexe -->
+	<data name="Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="YourAgenda" xml:space="preserve">
+    <value>Agenda ta</value>
+  </data>
+	<data name="AddNewActivity" xml:space="preserve">
+    <value>Adaugă activitate nouă</value>
+  </data>
+	<data name="CreatedAt" xml:space="preserve">
+    <value>Creat la:</value>
+  </data>
+	<data name="CreatedBy" xml:space="preserve">
+    <value>Creat de:</value>
+  </data>
+	<data name="Activity" xml:space="preserve">
+    <value>Activitate:</value>
+  </data>
+	<data name="Restaurant" xml:space="preserve">
+    <value>Restaurant:</value>
+  </data>
+	<data name="NatureTrail" xml:space="preserve">
+    <value>Traseu natural:</value>
+  </data>
+	<data name="TouristAttraction" xml:space="preserve">
+    <value>Atracție:</value>
+  </data>
+	<data name="Edit" xml:space="preserve">
+    <value>Editează</value>
+  </data>
+	<data name="Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+	<data name="Delete" xml:space="preserve">
+    <value>Șterge</value>
+  </data>
+	<data name="NoAgendasFound" xml:space="preserve">
+    <value>Nicio agendă găsită.</value>
+  </data>
+	<data name="CreateTitle" xml:space="preserve">
+    <value>Creare</value>
+  </data>
+	<data name="AgendaLabel" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="TitleLabel" xml:space="preserve">
+    <value>Titlu</value>
+  </data>
+	<data name="DateCreatedLabel" xml:space="preserve">
+    <value>Data Creării</value>
+  </data>
+	<data name="ActivityLabel" xml:space="preserve">
+    <value>Activitate</value>
+  </data>
+	<data name="RestaurantLabel" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="NatureTrailLabel" xml:space="preserve">
+    <value>Traseu Natural</value>
+  </data>
+	<data name="TouristAttractionLabel" xml:space="preserve">
+    <value>Atracție Turistică</value>
+  </data>
+	<data name="SelectOption" xml:space="preserve">
+    <value>Vă rugăm să selectați...</value>
+  </data>
+	<data name="CreateButtonLabel" xml:space="preserve">
+    <value>Creare</value>
+  </data>
+	<data name="BackToListLabel" xml:space="preserve">
+    <value>Înapoi la Listă</value>
+  </data>
+	<data name="UserNotFound" xml:space="preserve">
+    <value>Utilizatorul nu a fost găsit</value>
+  </data>
+	<data name="UserNotAuthenticated" xml:space="preserve">
+    <value>Utilizatorul nu este autentificat</value>
+  </data>
+
+	<!-- Activități -->
+	<data name="Title_Activities" xml:space="preserve">
+    <value>Activități</value>
+  </data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Crează Nou</value>
+  </data>
+	<data name="Column_Name" xml:space="preserve">
+    <value>Nume</value>
+  </data>
+	<data name="Column_Description" xml:space="preserve">
+    <value>Descriere</value>
+  </data>
+	<data name="Column_Location" xml:space="preserve">
+    <value>Locație</value>
+  </data>
+	<data name="Column_StartDate" xml:space="preserve">
+    <value>Data Începerii</value>
+  </data>
+	<data name="Column_EndDate" xml:space="preserve">
+    <value>Data Terminării</value>
+  </data>
+	<data name="Button_Edit" xml:space="preserve">
+    <value>Editează</value>
+  </data>
+	<data name="Button_Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+	<data name="Button_Delete" xml:space="preserve">
+    <value>Șterge</value>
+  </data>
+	<data name="CreateActivity" xml:space="preserve">
+    <value>Creează activitate</value>
+  </data>
+	<data name="ActivityName" xml:space="preserve">
+    <value>Nume activitate</value>
+  </data>
+	<data name="ActivityDescription" xml:space="preserve">
+    <value>Descriere activitate</value>
+  </data>
+	<data name="ActivityLocation" xml:space="preserve">
+    <value>Locație activitate</value>
+  </data>
+	<data name="ActivityStartDate" xml:space="preserve">
+    <value>Data începerii</value>
+  </data>
+	<data name="ActivityEndDate" xml:space="preserve">
+    <value>Data finalizării</value>
+  </data>
+	<data name="CreateButton" xml:space="preserve">
+    <value>Creează</value>
+  </data>
+	<data name="BackToList" xml:space="preserve">
+    <value>Înapoi la listă</value>
+  </data>
+	<data name="Title_Delete" xml:space="preserve">
+    <value>Șterge activitatea</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Ești sigur că vrei să ștergi această activitate?</value>
+  </data>
+	<data name="Label_Activity" xml:space="preserve">
+    <value>Activitate</value>
+  </data>
+
+	<!-- Detalii / Edit / Save -->
+	<data name="Title_Details" xml:space="preserve">
+    <value>Detalii activitate</value>
+  </data>
+	<data name="Title_Edit" xml:space="preserve">
+    <value>Editează activitate</value>
+  </data>
+	<data name="Button_Save" xml:space="preserve">
+    <value>Salvează</value>
+  </data>
+	<data name="Label_Required" xml:space="preserve">
+    <value>*</value>
+  </data>
+	<data name="Validation_Error" xml:space="preserve">
+    <value>Eroare în validarea datelor.</value>
+  </data>
+
+	<!-- Detalii Agendă -->
+	<data name="Title_DetailsAgenda" xml:space="preserve">
+    <value>Detalii Agendă</value>
+  </data>
+	<data name="Label_Agenda" xml:space="preserve">
+    <value>Agendă</value>
+  </data>
+	<data name="Label_Title" xml:space="preserve">
+    <value>Titlu</value>
+  </data>
+	<data name="Label_DateCreated" xml:space="preserve">
+    <value>Data Creării</value>
+  </data>
+	<data name="Label_User" xml:space="preserve">
+    <value>Utilizator</value>
+  </data>
+	<data name="Label_Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="Label_TouristAttraction" xml:space="preserve">
+    <value>Atracție Turistică</value>
+  </data>
+	<data name="Label_NatureTrail" xml:space="preserve">
+    <value>Traseu de Natură</value>
+  </data>
+
+	<!-- Ștergere / Edit Agenda -->
+	<data name="Title_Delete" xml:space="preserve">
+    <value>Șterge</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Ești sigur că vrei să ștergi aceasta?</value>
+  </data>
+	<data name="Agenda_Title" xml:space="preserve">
+    <value>Titlu</value>
+  </data>
+	<data name="Agenda_DateCreated" xml:space="preserve">
+    <value>Data creării</value>
+  </data>
+	<data name="Agenda_User" xml:space="preserve">
+    <value>Utilizator</value>
+  </data>
+	<data name="Title_EditAgenda" xml:space="preserve">
+    <value>Editează Agenda</value>
+  </data>
+
+	<!-- Agenda - ID-urile & opțiuni -->
+	<data name="Agenda_UserId" xml:space="preserve">
+    <value>Utilizator</value>
+  </data>
+	<data name="Agenda_ActivityId" xml:space="preserve">
+    <value>Activitate</value>
+  </data>
+	<data name="Agenda_RestaurantId" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="Agenda_NatureTrailId" xml:space="preserve">
+    <value>Traseu Natural</value>
+  </data>
+	<data name="Agenda_TouristAttractionId" xml:space="preserve">
+    <value>Atracție Turistică</value>
+  </data>
+
+	<!-- Listă Users -->
+	<data name="Title_Users" xml:space="preserve">
+    <value>Lista utilizatorilor</value>
+  </data>
+	<data name="Column_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+	<data name="Column_Actions" xml:space="preserve">
+    <value>Acțiuni</value>
+  </data>
+
+	<!-- Recenzii -->
+	<data name="Title_Reviews" xml:space="preserve">
+    <value>Recenzii</value>
+  </data>
+	<data name="Button_AddReview" xml:space="preserve">
+    <value>Adaugă Recenzie</value>
+  </data>
+	<data name="Label_Comment" xml:space="preserve">
+    <value>Comentariu:</value>
+  </data>
+	<data name="Label_Rating" xml:space="preserve">
+    <value>Scor:</value>
+  </data>
+	<data name="Label_DatePosted" xml:space="preserve">
+    <value>Data Postării:</value>
+  </data>
+	<data name="Badge_Activity" xml:space="preserve">
+    <value>Activitate:</value>
+  </data>
+	<data name="Badge_Restaurant" xml:space="preserve">
+    <value>Restaurant:</value>
+  </data>
+	<data name="Badge_NatureTrail" xml:space="preserve">
+    <value>Traseu Natural:</value>
+  </data>
+	<data name="Badge_Attraction" xml:space="preserve">
+    <value>Atracție Turistică:</value>
+  </data>
+	<data name="Title_EditReview" xml:space="preserve">
+    <value>Editează Recenzia</value>
+  </data>
+	<data name="Button_Save" xml:space="preserve">
+    <value>Salvează</value>
+  </data>
+	<data name="Button_BackToList" xml:space="preserve">
+    <value>Înapoi la listă</value>
+  </data>
+	<data name="Title_CreateReview" xml:space="preserve">
+    <value>Creează Recenzie</value>
+  </data>
+	<data name="Label_Review" xml:space="preserve">
+    <value>Recenzie</value>
+  </data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Creează</value>
+  </data>
+	<data name="Title_ReviewDetails" xml:space="preserve">
+    <value>Detalii Recenzie</value>
+  </data>
+	<data name="Label_Review" xml:space="preserve">
+    <value>Recenzie</value>
+  </data>
+	<data name="Label_Rating" xml:space="preserve">
+    <value>Evaluare</value>
+  </data>
+	<data name="Label_DatePosted" xml:space="preserve">
+    <value>Data Publicării</value>
+  </data>
+	<data name="Label_User" xml:space="preserve">
+    <value>Utilizator</value>
+  </data>
+	<data name="Title_DeleteReview" xml:space="preserve">
+    <value>Ștergere Recenzie</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Ești sigur că vrei să ștergi această recenzie?</value>
+  </data>
+
+	<!-- Restaurants -->
+	<data name="Title_Restaurants" xml:space="preserve">
+    <value>Restaurante</value>
+  </data>
+	<data name="Button_CreateNew" xml:space="preserve">
+    <value>Creează Nou</value>
+  </data>
+	<data name="Column_Address" xml:space="preserve">
+    <value>Adresă</value>
+  </data>
+	<data name="Column_PhoneNumber" xml:space="preserve">
+    <value>Număr de telefon</value>
+  </data>
+	<data name="Column_Cuisine" xml:space="preserve">
+    <value>Tip de bucătărie</value>
+  </data>
+
+	<!-- NatureTrails -->
+	<data name="Title_NatureTrails" xml:space="preserve">
+    <value>Trasee Naturale</value>
+  </data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+    <value>Lungime (Km)</value>
+  </data>
+
+	<!-- TouristAttractions -->
+	<data name="Title_TouristAttractions" xml:space="preserve">
+    <value>Atracții Turistice</value>
+  </data>
+	<data name="Column_OpeningHours" xml:space="preserve">
+    <value>Ore de Deschidere</value>
+  </data>
+
+	<!-- Meniu Layout -->
+	<data name="Menu_Users" xml:space="preserve">
+    <value>Utilizatori</value>
+  </data>
+	<data name="Menu_Agenda" xml:space="preserve">
+    <value>Agendă</value>
+  </data>
+	<data name="Menu_Activities" xml:space="preserve">
+    <value>Activități</value>
+  </data>
+	<data name="Menu_Restaurants" xml:space="preserve">
+    <value>Restaurante</value>
+  </data>
+	<data name="Menu_NatureTrails" xml:space="preserve">
+    <value>Trasee Naturale</value>
+  </data>
+	<data name="Menu_Reviews" xml:space="preserve">
+    <value>Recenzii</value>
+  </data>
+	<data name="Menu_TouristAttractions" xml:space="preserve">
+    <value>Atracții Turistice</value>
+  </data>
+	<data name="Menu_Help" xml:space="preserve">
+    <value>Ajutor</value>
+  </data>
+	<data name="Menu_Privacy" xml:space="preserve">
+    <value>Confidențialitate</value>
+  </data>
+	<data name="Menu_Hello" xml:space="preserve">
+    <value>Salut</value>
+  </data>
+	<data name="Menu_Logout" xml:space="preserve">
+    <value>Deconectare</value>
+  </data>
+	<data name="Menu_Register" xml:space="preserve">
+    <value>Înregistrare</value>
+  </data>
+	<data name="Menu_Login" xml:space="preserve">
+    <value>Autentificare</value>
+  </data>
+	<data name="Menu_Manage" xml:space="preserve">
+    <value>Administrare</value>
+  </data>
+
+	<!-- Register -->
+	<data name="Title_Register" xml:space="preserve">
+    <value>Înregistrare</value>
+  </data>
+	<data name="Label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="Placeholder_Email" xml:space="preserve">
+    <value>nume@exemplu.com</value>
+  </data>
+	<data name="Label_Password" xml:space="preserve">
+    <value>Parolă</value>
+  </data>
+	<data name="Placeholder_Password" xml:space="preserve">
+    <value>Introduceți parola</value>
+  </data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+    <value>Confirmă Parola</value>
+  </data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+    <value>Re-introduceți parola</value>
+  </data>
+	<data name="Button_Register" xml:space="preserve">
+    <value>Înregistrare</value>
+  </data>
+
+	<!-- Login -->
+	<data name="Title_Login" xml:space="preserve">
+    <value>Autentificare</value>
+  </data>
+	<data name="Label_RememberMe" xml:space="preserve">
+    <value>Ține-mă minte</value>
+  </data>
+	<data name="Button_Login" xml:space="preserve">
+    <value>Autentificare</value>
+  </data>
+	<data name="Link_ForgotPassword" xml:space="preserve">
+    <value>Ai uitat parola?</value>
+  </data>
+	<data name="Link_RegisterNewUser" xml:space="preserve">
+    <value>Înregistrează un utilizator nou</value>
+  </data>
+	<data name="Link_ResendEmailConfirmation" xml:space="preserve">
+    <value>Retrimite confirmarea pe email</value>
+  </data>
+
+	<!-- ResendEmailConfirmation -->
+	<data name="Title_ResendEmailConfirmation" xml:space="preserve">
+    <value>Retrimite confirmarea pe email</value>
+  </data>
+
+	<!-- ForgotPassword -->
+	<data name="Title_ForgotPassword" xml:space="preserve">
+    <value>Ți-ai uitat parola?</value>
+  </data>
+	<data name="Heading_EnterYourEmail" xml:space="preserve">
+    <value>Introduce-ți email-ul</value>
+  </data>
+
+	<!-- Butoane reset / resend -->
+	<data name="Button_Resend" xml:space="preserve">
+    <value>Retrimite</value>
+  </data>
+	<data name="Button_ResetPassword" xml:space="preserve">
+    <value>Resetează Parola</value>
+  </data>
+
+	<!-- Selectare limbă -->
+	<data name="Menu_Language" xml:space="preserve">
+    <value>Limba</value>
+  </data>
+	<data name="Title_Create" xml:space="preserve">
+  <value>Creare</value>
+</data>
+	<data name="Title_DeleteRestaurant" xml:space="preserve">
+  <value>Șterge Restaurant</value>
+</data>
+	<data name="Title_DetailsRestaurant" xml:space="preserve">
+  <value>Detalii Restaurant</value>
+</data>
+	<data name="Title_EditRestaurant" xml:space="preserve">
+  <value>Editează Restaurant</value>
+</data>
+	<data name="Label_Restaurant" xml:space="preserve">
+  <value>Restaurant</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Nume</value>
+</data>
+	<data name="Column_Address" xml:space="preserve">
+  <value>Adresă</value>
+</data>
+	<data name="Column_PhoneNumber" xml:space="preserve">
+  <value>Număr de telefon</value>
+</data>
+	<data name="Column_Cuisine" xml:space="preserve">
+  <value>Tip de bucătărie</value>
+</data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Ești sigur că vrei să ștergi aceasta?</value>
+</data>
+	<data name="Button_Create" xml:space="preserve">
+  <value>Creare</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Salvează</value>
+</data>
+	<data name="Button_BackToList" xml:space="preserve">
+  <value>Înapoi la listă</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+  <value>Șterge</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Editează</value>
+</data>
+	<data name="Title_Create" xml:space="preserve">
+  <value>Creare</value>
+</data>
+	<data name="Label_NatureTrail" xml:space="preserve">
+  <value>Traseu Natural</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Nume</value>
+</data>
+	<data name="Column_Description" xml:space="preserve">
+  <value>Descriere</value>
+</data>
+	<data name="Column_Location" xml:space="preserve">
+  <value>Locație</value>
+</data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+  <value>Lungime (Km)</value>
+</data>
+	<data name="Button_Create" xml:space="preserve">
+  <value>Creare</value>
+</data>
+	<data name="Button_BackToList" xml:space="preserve">
+  <value>Înapoi la listă</value>
+</data>
+	<data name="Title_DeleteNatureTrail" xml:space="preserve">
+  <value>Șterge Traseu Natural</value>
+</data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Ești sigur că vrei să ștergi aceasta?</value>
+</data>
+	<data name="Title_DetailsNatureTrail" xml:space="preserve">
+  <value>Detalii Traseu Natural</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Editează</value>
+</data>
+	<data name="Title_EditNatureTrail" xml:space="preserve">
+  <value>Editează Traseu Natural</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Salvează</value>
+</data>
+	<data name="Title_Profile" xml:space="preserve">
+  <value>Profil</value>
+</data>
+	<data name="Placeholder_Username" xml:space="preserve">
+  <value>Vă rugăm să introduceți un username.</value>
+</data>
+	<data name="Label_Username" xml:space="preserve">
+  <value>Nume de utilizator</value>
+</data>
+	<data name="Placeholder_PhoneNumber" xml:space="preserve">
+  <value>Vă rugăm să introduceți numărul de telefon.</value>
+</data>
+	<data name="Label_PhoneNumber" xml:space="preserve">
+  <value>Număr de telefon</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Salvează</value>
+</data>
+
+	<!-- Email.cshtml -->
+	<data name="Title_ManageEmail" xml:space="preserve">
+  <value>Gestionare Email</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>Vă rugăm să introduceți adresa de email.</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Button_SendVerificationEmail" xml:space="preserve">
+  <value>Trimite email de verificare</value>
+</data>
+	<data name="Placeholder_NewEmail" xml:space="preserve">
+  <value>Vă rugăm să introduceți noua adresă de email.</value>
+</data>
+	<data name="Label_NewEmail" xml:space="preserve">
+  <value>Email nou</value>
+</data>
+	<data name="Button_ChangeEmail" xml:space="preserve">
+  <value>Schimbă adresa de email</value>
+</data>
+
+	<!-- ChangePassword.cshtml -->
+	<data name="Title_ChangePassword" xml:space="preserve">
+  <value>Schimbare parolă</value>
+</data>
+	<data name="Placeholder_OldPassword" xml:space="preserve">
+  <value>Vă rugăm să introduceți parola veche.</value>
+</data>
+	<data name="Label_OldPassword" xml:space="preserve">
+  <value>Parolă veche</value>
+</data>
+	<data name="Placeholder_NewPassword" xml:space="preserve">
+  <value>Vă rugăm să introduceți parola nouă.</value>
+</data>
+	<data name="Label_NewPassword" xml:space="preserve">
+  <value>Parolă nouă</value>
+</data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+  <value>Vă rugăm să confirmați parola nouă.</value>
+</data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+  <value>Confirmare parolă</value>
+</data>
+	<data name="Button_UpdatePassword" xml:space="preserve">
+  <value>Actualizează parola</value>
+</data>
+	<data name="StartingAt" xml:space="preserve">
+  <value>Începe la</value>
+</data>
+	<data name="Restaurant" xml:space="preserve">
+  <value>Restaurant:</value>
+</data>
+	<data name="NatureTrail" xml:space="preserve">
+  <value>Traseu natural:</value>
+</data>
+	<data name="Attraction" xml:space="preserve">
+  <value>Atracție:</value>
+</data>
+</root>

@@ -2,12 +2,12 @@
 @model Testare_TravelingApp.Pages.Agendas.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = Model.CreateTitle;
 }
 
-<h1>Create</h1>
+<h1>@Model.CreateTitle</h1>
 
-<h4>Agenda</h4>
+<h4>@Model.AgendaLabel</h4>
 <hr />
 <div class="row">
     <div class="col-md-6">
@@ -15,57 +15,55 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Agenda.Title" class="control-label"></label>
+                <label asp-for="Agenda.Title" class="control-label">@Model.TitleLabel</label>
                 <input asp-for="Agenda.Title" class="form-control" />
                 <span asp-validation-for="Agenda.Title" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Agenda.DateCreated" class="control-label"></label>
+                <label asp-for="Agenda.DateCreated" class="control-label">@Model.DateCreatedLabel</label>
                 <input asp-for="Agenda.DateCreated" type="date" class="form-control" />
                 <span asp-validation-for="Agenda.DateCreated" class="text-danger"></span>
             </div>
 
-            
-
             <div class="form-group">
-                <label asp-for="Agenda.ActivityId" class="control-label"></label>
+                <label asp-for="Agenda.ActivityId" class="control-label">@Model.ActivityLabel</label>
                 <select asp-for="Agenda.ActivityId" class="form-control" asp-items="ViewBag.ActivityId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model.SelectOption</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.RestaurantId" class="control-label"></label>
+                <label asp-for="Agenda.RestaurantId" class="control-label">@Model.RestaurantLabel</label>
                 <select asp-for="Agenda.RestaurantId" class="form-control" asp-items="ViewBag.RestaurantId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model.SelectOption</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.NatureTrailId" class="control-label"></label>
+                <label asp-for="Agenda.NatureTrailId" class="control-label">@Model.NatureTrailLabel</label>
                 <select asp-for="Agenda.NatureTrailId" class="form-control" asp-items="ViewBag.NatureTrailId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model.SelectOption</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Agenda.TouristAttractionId" class="control-label"></label>
+                <label asp-for="Agenda.TouristAttractionId" class="control-label">@Model.TouristAttractionLabel</label>
                 <select asp-for="Agenda.TouristAttractionId" class="form-control" asp-items="ViewBag.TouristAttractionId">
-                    <option value="">Please select...</option>
+                    <option value="">@Model.SelectOption</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@Model.CreateButtonLabel" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">@Model.BackToListLabel</a>
 </div>
 
 @section Scripts {

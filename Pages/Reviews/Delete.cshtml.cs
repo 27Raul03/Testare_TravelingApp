@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Testare_TravelingApp.Data;
 using Testare_TravelingApp.Models;
 
@@ -12,11 +9,13 @@ namespace Testare_TravelingApp.Pages.Reviews
 {
     public class DeleteModel : PageModel
     {
-        private readonly Testare_TravelingApp.Data.Testare_TravelingAppContext _context;
+        private readonly Testare_TravelingAppContext _context;
+        public readonly IStringLocalizer _localizer;
 
-        public DeleteModel(Testare_TravelingApp.Data.Testare_TravelingAppContext context)
+        public DeleteModel(Testare_TravelingAppContext context, IStringLocalizerFactory localizerFactory)
         {
             _context = context;
+            _localizer = localizerFactory.Create("Resources", "Testare_TravelingApp");
         }
 
         [BindProperty]
@@ -29,16 +28,19 @@ namespace Testare_TravelingApp.Pages.Reviews
                 return NotFound();
             }
 
-            var review = await _context.Review.FirstOrDefaultAsync(m => m.ReviewId == id);
+            Review = await _context.Review
+                .Include(r => r.User)
+                .Include(r => r.Activity)
+                .Include(r => r.NatureTrail)
+                .Include(r => r.Restaurant)
+                .Include(r => r.TouristAttraction)
+                .FirstOrDefaultAsync(m => m.ReviewId == id);
 
-            if (review == null)
+            if (Review == null)
             {
                 return NotFound();
             }
-            else
-            {
-                Review = review;
-            }
+
             return Page();
         }
 
@@ -52,8 +54,7 @@ namespace Testare_TravelingApp.Pages.Reviews
             var review = await _context.Review.FindAsync(id);
             if (review != null)
             {
-                Review = review;
-                _context.Review.Remove(Review);
+                _context.Review.Remove(review);
                 await _context.SaveChangesAsync();
             }
 

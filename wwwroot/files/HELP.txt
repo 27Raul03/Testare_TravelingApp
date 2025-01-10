@@ -1,0 +1,33 @@
+HELP
+
+-Prima data când un user va intra pe site-ul nostru acesta va trebui sa își creeze un cont nou folosind butonul de "Register" unde își va introduce email-ul și parola. iar mai apoi va confirma contul creat după care acesta va fi redirecționat la pagina de Login.
+-În cazul în care acesta are deja cont, user-ul va folosi butonul de "Login" pentru a putea intra în contul său.
+
+-Pe prima pagină a site-ului avem un buton ("Start Planning Your Trip") care va duce utilizatorul la tab-ul de "Activities".
+-În această pagină utilizatorul poate să adauge activități accesând butonul de "Create New".
+-Astfel utilizatorul are opțiunea de a vedea activitățiile adăugate de el și de alți utilizatori în orașul Cluj.
+-Acesta poate sa vadă detaliile activității folosind butonul "Details", le poate edita cu butonul "Edit" și șterge cu butonul de "Delete".
+
+-Pagina de "Users" se pot vedea toți utilizatorii aplicației și este locul unde fiecare user logat îți poate șterge contul lui și numai contul lui.
+
+-Pagina de "Agenda" utilizatorul poate să își creeze propria agenda folosind butonul de "Add New Activity" pentru a-și crea propria agenda.
+-ID-urile fiind opționale și reprezentând numele nu cifra ID-ului.
+-Acesta poate vedea detaliile activitățiilor folosind butonul "Details", le poate edita folosind butonul "Edit" și le poate șterge folosind butonul "Delete".
+-User-ul poate vedea doar activitățiile din agenda sa.
+
+-În pagina "Restaurants" utilizatorul poate să adauge restaurante accesând butonul de "Create New".
+-Astfel utilizatorul are opțiunea de a vedea restaurantele adăugate de el și de alți utilizatori în orașul Cluj.
+-Acesta poate sa vadă detaliile restaurantului folosind butonul "Details", le poate edita cu butonul "Edit" și șterge cu butonul de "Delete".
+
+-În pagina "NatureTrails" utilizatorul poate să adauge drumeții accesând butonul de "Create New".
+-Astfel utilizatorul are opțiunea de a vedea drumețiilor adăugate de el și de alți utilizatori în orașul Cluj.
+-Acesta poate sa vadă detaliile drumeției folosind butonul "Details", le poate edita cu butonul "Edit" și șterge cu butonul de "Delete".
+
+-În pagina "Reviews" utilizatorul poate să adauge recenzii accesând butonul de "Create New".
+-ID-urile fiind opționale și reprezentând numele nu cifra ID-ului.
+-Astfel utilizatorul are opțiunea de a vedea recenzia adăugate de el și de alți utilizatori în orașul Cluj.
+-Acesta poate sa vadă detaliile recenziilor sale și ale altora folosind butonul "Details", le poate edita cu butonul "Edit", dar doar recenziile facute de utilizatorul respective și șterge cu butonul de "Delete", dar doar recenziile facute de utilizatorul respective.
+
+-În pagina "TouristAttractions" utilizatorul poate să adauge drumeții accesând butonul de "Create New".
+-Astfel utilizatorul are opțiunea de a vedea atracțiile adăugate de el și de alți utilizatori în orașul Cluj.
+-Acesta poate sa vadă detaliile atracției folosind butonul "Details", le poate edita cu butonul "Edit" și șterge cu butonul de "Delete".

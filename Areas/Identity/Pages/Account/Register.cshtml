@@ -1,7 +1,10 @@
 ﻿@page
-@model RegisterModel
+@model Testare_TravelingApp.Areas.Identity.Pages.Account.RegisterModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
+
 @{
-    ViewData["Title"] = "Register";
+    // Înlocuim "Register" cu localizare
+    ViewData["Title"] = _localizer["Title_Register"];
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -9,24 +12,45 @@
 <div class="d-flex justify-content-center align-items-center">
     <div class="col-md-3">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            
+
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <!-- Email -->
             <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
+                <input asp-for="Input.Email"
+                       class="form-control"
+                       autocomplete="username"
+                       aria-required="true"
+                       placeholder="@_localizer["Placeholder_Email"]" />
+                <label asp-for="Input.Email">@_localizer["Label_Email"]</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+
+            <!-- Password -->
             <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
+                <input asp-for="Input.Password"
+                       class="form-control"
+                       autocomplete="new-password"
+                       aria-required="true"
+                       placeholder="@_localizer["Placeholder_Password"]" />
+                <label asp-for="Input.Password">@_localizer["Label_Password"]</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
+
+            <!-- Confirm Password -->
             <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                <input asp-for="Input.ConfirmPassword"
+                       class="form-control"
+                       autocomplete="new-password"
+                       aria-required="true"
+                       placeholder="@_localizer["Placeholder_ConfirmPassword"]" />
+                <label asp-for="Input.ConfirmPassword">@_localizer["Label_ConfirmPassword"]</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">
+                @_localizer["Button_Register"]
+            </button>
         </form>
     </div>
 </div>

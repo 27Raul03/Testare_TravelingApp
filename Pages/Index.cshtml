@@ -5,35 +5,34 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to MyTravelFriend</h1>
-    <p class="display-4 d-flex justify-content-center" style="font-size:18px">Your one-stop destination to plan and organize your trips effortlessly.</p>
+    <h1 class="display-4">@Model.WelcomeMessage</h1>
+    <p class="display-4 d-flex justify-content-center" style="font-size:18px">@Model.SubText</p>
 
     <p>
-        <a href="@Url.Page("/Activities/Index")" class="btn btn-lg d-flex justify-content-center bg-opacity-10" style="background-color:beige">Start Planning Your Trip</a>
+        <a href="@Url.Page("/Activities/Index")" class="btn btn-lg d-flex justify-content-center bg-opacity-10" style="background-color:beige">@Model.StartPlanningText</a>
     </p>
 
     <div class="row mt-5">
         <div class="col-md-4">
-            <h3>Itinerary Planning</h3>
+            <h3>@Model.ItineraryPlanning</h3>
             <img src="https://shorturl.at/L4z63" class="w-100" />
-            <p>Plan your entire trip with ease, from destinations to activities.</p>
+            <p>@Model.ItineraryDescription</p>
         </div>
         <div class="col-md-4">
-            <h3>Travel Guides</h3>
+            <h3>@Model.TravelGuides</h3>
             <img src="https://shorturl.at/JNGG8" class="w-100" />
-            <p>Get helpful tips and recommendations for your travels.</p>
+            <p>@Model.TravelGuidesDescription</p>
         </div>
         <div class="col-md-4">
-            <h3>Track Your Progress</h3>
+            <h3>@Model.TrackProgress</h3>
             <img src="https://shorturl.at/N9BLA" class="w-100" />
-            <p>Keep track of your plans and share with your friends.</p>
+            <p>@Model.TrackProgressDescription</p>
         </div>
     </div>
 
     <div class="mt-5">
-        <h2>Why Choose MyTravelFriend?</h2>
-        <h5>With MyTravelFriend, you can plan your trip efficiently, save time, and make memories that last a lifetime!</h6>
+        <h2>@Model.WhyChooseTitle</h2>
+        <h5>@Model.WhyChooseDescription</h5>
         <img class="w-100" src="~/MyTravelFriend.jpg" style="max-width: 300px; margin: 0 auto; display: block;" />
-        
     </div>
 </div>

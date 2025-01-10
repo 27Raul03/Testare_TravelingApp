@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+  -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<!-- Unique English entries (no full duplicates) -->
+	<data name="WelcomeMessage" xml:space="preserve">
+    <value>Welcome to MyTravelFriend</value>
+  </data>
+	<data name="SubText" xml:space="preserve">
+    <value>Your one-stop destination to plan and organize your trips effortlessly.</value>
+  </data>
+	<data name="StartPlanningText" xml:space="preserve">
+    <value>Start Planning Your Trip</value>
+  </data>
+	<data name="ItineraryPlanning" xml:space="preserve">
+    <value>Itinerary Planning</value>
+  </data>
+	<data name="ItineraryDescription" xml:space="preserve">
+    <value>Plan your entire trip with ease, from destinations to activities.</value>
+  </data>
+	<data name="TravelGuides" xml:space="preserve">
+    <value>Travel Guides</value>
+  </data>
+	<data name="TravelGuidesDescription" xml:space="preserve">
+    <value>Get helpful tips and recommendations for your travels.</value>
+  </data>
+	<data name="TrackProgress" xml:space="preserve">
+    <value>Track Your Progress</value>
+  </data>
+	<data name="TrackProgressDescription" xml:space="preserve">
+    <value>Keep track of your plans and share with your friends.</value>
+  </data>
+	<data name="WhyChooseTitle" xml:space="preserve">
+    <value>Why Choose MyTravelFriend?</value>
+  </data>
+	<data name="WhyChooseDescription" xml:space="preserve">
+    <value>With MyTravelFriend, you can plan your trip efficiently, save time, and make memories that last a lifetime!</value>
+  </data>
+	<data name="ListName" xml:space="preserve">
+    <value>Users List</value>
+  </data>
+	<data name="ActionTableName" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+	<data name="ActivityPage" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+	<data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="YourAgenda" xml:space="preserve">
+    <value>Your Agenda</value>
+  </data>
+	<data name="AddActivityButon" xml:space="preserve">
+    <value>Add New Activity</value>
+  </data>
+	<data name="AttractionsTitle" xml:space="preserve">
+    <value>Attractions</value>
+  </data>
+	<data name="CurrentLanguage" xml:space="preserve">
+    <value>EN</value>
+  </data>
+	<data name="Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="YourAgenda" xml:space="preserve">
+    <value>Your Agenda</value>
+  </data>
+	<data name="AddNewActivity" xml:space="preserve">
+    <value>Add New Activity</value>
+  </data>
+	<data name="CreatedAt" xml:space="preserve">
+    <value>Created at:</value>
+  </data>
+	<data name="CreatedBy" xml:space="preserve">
+    <value>Created by:</value>
+  </data>
+	<data name="Activity" xml:space="preserve">
+    <value>Activity:</value>
+  </data>
+	<data name="Restaurant" xml:space="preserve">
+    <value>Restaurant:</value>
+  </data>
+	<data name="NatureTrail" xml:space="preserve">
+    <value>Nature Trail:</value>
+  </data>
+	<data name="TouristAttraction" xml:space="preserve">
+    <value>Attraction:</value>
+  </data>
+	<data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="NoAgendasFound" xml:space="preserve">
+    <value>No agendas found.</value>
+  </data>
+	<data name="CreateTitle" xml:space="preserve">
+    <value>Create</value>
+  </data>
+	<data name="AgendaLabel" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="TitleLabel" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="DateCreatedLabel" xml:space="preserve">
+    <value>Date Created</value>
+  </data>
+	<data name="ActivityLabel" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+	<data name="RestaurantLabel" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="NatureTrailLabel" xml:space="preserve">
+    <value>Nature Trail</value>
+  </data>
+	<data name="TouristAttractionLabel" xml:space="preserve">
+    <value>Tourist Attraction</value>
+  </data>
+	<data name="SelectOption" xml:space="preserve">
+    <value>Please select...</value>
+  </data>
+	<data name="CreateButtonLabel" xml:space="preserve">
+    <value>Create</value>
+  </data>
+	<data name="BackToListLabel" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+	<data name="UserNotFound" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+	<data name="UserNotAuthenticated" xml:space="preserve">
+    <value>User not authenticated</value>
+  </data>
+	<data name="Title_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+	<data name="Column_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="Column_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+	<data name="Column_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+	<data name="Column_StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+	<data name="Column_EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+	<data name="Button_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="Button_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="Button_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="CreateActivity" xml:space="preserve">
+    <value>Create Activity</value>
+  </data>
+	<data name="ActivityName" xml:space="preserve">
+    <value>Activity Name</value>
+  </data>
+	<data name="ActivityDescription" xml:space="preserve">
+    <value>Activity Description</value>
+  </data>
+	<data name="ActivityLocation" xml:space="preserve">
+    <value>Activity Location</value>
+  </data>
+	<data name="ActivityStartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+	<data name="ActivityEndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+	<data name="CreateButton" xml:space="preserve">
+    <value>Create</value>
+  </data>
+	<data name="BackToList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+	<data name="Title_Delete" xml:space="preserve">
+    <value>Delete Activity</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete this activity?</value>
+  </data>
+	<data name="Label_Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+	<data name="Title_Details" xml:space="preserve">
+    <value>Activity Details</value>
+  </data>
+	<data name="Title_Edit" xml:space="preserve">
+    <value>Edit Activity</value>
+  </data>
+	<data name="Button_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+	<data name="Label_Required" xml:space="preserve">
+    <value>*</value>
+  </data>
+	<data name="Validation_Error" xml:space="preserve">
+    <value>Validation error occurred.</value>
+  </data>
+	<data name="Title_DetailsAgenda" xml:space="preserve">
+    <value>Agenda Details</value>
+  </data>
+	<data name="Label_Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="Label_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="Label_DateCreated" xml:space="preserve">
+    <value>Date Created</value>
+  </data>
+	<data name="Label_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+	<data name="Label_Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="Label_TouristAttraction" xml:space="preserve">
+    <value>Tourist Attraction</value>
+  </data>
+	<data name="Label_NatureTrail" xml:space="preserve">
+    <value>Nature Trail</value>
+  </data>
+	<data name="Button_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="Button_BackToList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+	<data name="Title_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete this?</value>
+  </data>
+	<data name="Agenda_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="Agenda_DateCreated" xml:space="preserve">
+    <value>Date Created</value>
+  </data>
+	<data name="Agenda_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+	<data name="Title_EditAgenda" xml:space="preserve">
+    <value>Edit Agenda</value>
+  </data>
+	<data name="Label_SelectOption" xml:space="preserve">
+    <value>Please select...</value>
+  </data>
+	<data name="Agenda_UserId" xml:space="preserve">
+    <value>User</value>
+  </data>
+	<data name="Agenda_ActivityId" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+	<data name="Agenda_RestaurantId" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="Agenda_NatureTrailId" xml:space="preserve">
+    <value>Nature Trail</value>
+  </data>
+	<data name="Agenda_TouristAttractionId" xml:space="preserve">
+    <value>Tourist Attraction</value>
+  </data>
+	<data name="Title_Users" xml:space="preserve">
+    <value>Users List</value>
+  </data>
+	<data name="Column_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="Column_Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+	<data name="Title_Reviews" xml:space="preserve">
+    <value>Reviews</value>
+  </data>
+	<data name="Button_AddReview" xml:space="preserve">
+    <value>Add Review</value>
+  </data>
+	<data name="Label_Comment" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+	<data name="Label_Rating" xml:space="preserve">
+    <value>Rating:</value>
+  </data>
+	<data name="Label_DatePosted" xml:space="preserve">
+    <value>Date Posted:</value>
+  </data>
+	<data name="Badge_Activity" xml:space="preserve">
+    <value>Activity:</value>
+  </data>
+	<data name="Badge_Restaurant" xml:space="preserve">
+    <value>Restaurant:</value>
+  </data>
+	<data name="Badge_NatureTrail" xml:space="preserve">
+    <value>Nature Trail:</value>
+  </data>
+	<data name="Badge_Attraction" xml:space="preserve">
+    <value>Attraction:</value>
+  </data>
+	<data name="Title_EditReview" xml:space="preserve">
+    <value>Edit Review</value>
+  </data>
+	<data name="Button_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+	<data name="Button_BackToList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+	<data name="Title_CreateReview" xml:space="preserve">
+    <value>Create Review</value>
+  </data>
+	<data name="Label_Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+	<data name="Title_ReviewDetails" xml:space="preserve">
+    <value>Review Details</value>
+  </data>
+	<data name="Label_Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+	<data name="Label_Rating" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+	<data name="Label_DatePosted" xml:space="preserve">
+    <value>Date Posted</value>
+  </data>
+	<data name="Label_User" xml:space="preserve">
+    <value>User</value>
+  </data>
+	<data name="Title_DeleteReview" xml:space="preserve">
+    <value>Delete Review</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Are you sure you want to delete this review?</value>
+  </data>
+	<data name="Title_Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+	<data name="Button_CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+	<data name="Column_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="Column_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+	<data name="Column_PhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+	<data name="Column_Cuisine" xml:space="preserve">
+    <value>Cuisine</value>
+  </data>
+	<data name="Button_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="Button_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="Button_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="Title_NatureTrails" xml:space="preserve">
+    <value>Nature Trails</value>
+  </data>
+	<data name="Button_CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+	<data name="Column_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+    <value>Length (Km)</value>
+  </data>
+	<data name="Title_TouristAttractions" xml:space="preserve">
+    <value>Tourist Attractions</value>
+  </data>
+	<data name="Column_OpeningHours" xml:space="preserve">
+    <value>Opening Hours</value>
+  </data>
+	<data name="Menu_Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+	<data name="Menu_Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="Menu_Activities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+	<data name="Menu_Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+	<data name="Menu_NatureTrails" xml:space="preserve">
+    <value>Nature Trails</value>
+  </data>
+	<data name="Menu_Reviews" xml:space="preserve">
+    <value>Reviews</value>
+  </data>
+	<data name="Menu_TouristAttractions" xml:space="preserve">
+    <value>Tourist Attractions</value>
+  </data>
+	<data name="Menu_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+	<data name="Menu_Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+	<data name="Menu_Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+	<data name="Menu_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+	<data name="Menu_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+	<data name="Menu_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+	<data name="Menu_Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+	<data name="Title_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+	<data name="Label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="Placeholder_Email" xml:space="preserve">
+    <value>name@example.com</value>
+  </data>
+	<data name="Label_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+	<data name="Placeholder_Password" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+    <value>Re-enter password</value>
+  </data>
+	<data name="Button_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+	<data name="Title_Login" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+	<data name="Label_RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+	<data name="Button_Login" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+	<data name="Link_ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+	<data name="Link_RegisterNewUser" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+	<data name="Link_ResendEmailConfirmation" xml:space="preserve">
+    <value>Resend email confirmation</value>
+  </data>
+	<data name="Title_ResendEmailConfirmation" xml:space="preserve">
+    <value>Resend email confirmation</value>
+  </data>
+	<data name="Title_ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+	<data name="Heading_EnterYourEmail" xml:space="preserve">
+    <value>Enter your email.</value>
+  </data>
+	<data name="Button_Resend" xml:space="preserve">
+    <value>Resend</value>
+  </data>
+	<data name="Button_ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+	<data name="Menu_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+	<data name="Title_Create" xml:space="preserve">
+  <value>Create</value>
+</data>
+<data name="Title_DeleteRestaurant" xml:space="preserve">
+  <value>Delete Restaurant</value>
+</data>
+<data name="Title_DetailsRestaurant" xml:space="preserve">
+  <value>Restaurant Details</value>
+</data>
+<data name="Title_EditRestaurant" xml:space="preserve">
+  <value>Edit Restaurant</value>
+</data>
+<data name="Label_Restaurant" xml:space="preserve">
+  <value>Restaurant</value>
+</data>
+<data name="Column_Name" xml:space="preserve">
+  <value>Name</value>
+</data>
+<data name="Column_Address" xml:space="preserve">
+  <value>Address</value>
+</data>
+<data name="Column_PhoneNumber" xml:space="preserve">
+  <value>Phone Number</value>
+</data>
+<data name="Column_Cuisine" xml:space="preserve">
+  <value>Cuisine</value>
+</data>
+<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Are you sure you want to delete this?</value>
+</data>
+<data name="Button_Create" xml:space="preserve">
+  <value>Create</value>
+</data>
+<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+<data name="Button_Delete" xml:space="preserve">
+  <value>Delete</value>
+</data>
+<data name="Button_Edit" xml:space="preserve">
+  <value>Edit</value>
+</data>
+	<data name="Title_Create" xml:space="preserve">
+  <value>Create</value>
+</data>
+	<data name="Label_NatureTrail" xml:space="preserve">
+  <value>Nature Trail</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Name</value>
+</data>
+	<data name="Column_Description" xml:space="preserve">
+  <value>Description</value>
+</data>
+	<data name="Column_Location" xml:space="preserve">
+  <value>Location</value>
+</data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+  <value>Length (Km)</value>
+</data>
+	<data name="Button_Create" xml:space="preserve">
+  <value>Create</value>
+</data>
+	<data name="Button_BackToList" xml:space="preserve">
+  <value>Back to List</value>
+</data>
+	<data name="Title_DeleteNatureTrail" xml:space="preserve">
+  <value>Delete Nature Trail</value>
+</data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Are you sure you want to delete this?</value>
+</data>
+	<data name="Title_DetailsNatureTrail" xml:space="preserve">
+  <value>Nature Trail Details</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Edit</value>
+</data>
+	<data name="Title_EditNatureTrail" xml:space="preserve">
+  <value>Edit Nature Trail</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+	<data name="Title_Profile" xml:space="preserve">
+  <value>Profile</value>
+</data>
+	<data name="Placeholder_Username" xml:space="preserve">
+  <value>Please choose your username.</value>
+</data>
+	<data name="Label_Username" xml:space="preserve">
+  <value>Username</value>
+</data>
+	<data name="Placeholder_PhoneNumber" xml:space="preserve">
+  <value>Please enter your phone number.</value>
+</data>
+	<data name="Label_PhoneNumber" xml:space="preserve">
+  <value>Phone Number</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+
+	<!-- Email.cshtml -->
+	<data name="Title_ManageEmail" xml:space="preserve">
+  <value>Manage Email</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>Please enter your email.</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Button_SendVerificationEmail" xml:space="preserve">
+  <value>Send verification email</value>
+</data>
+	<data name="Placeholder_NewEmail" xml:space="preserve">
+  <value>Please enter new email.</value>
+</data>
+	<data name="Label_NewEmail" xml:space="preserve">
+  <value>New Email</value>
+</data>
+	<data name="Button_ChangeEmail" xml:space="preserve">
+  <value>Change email</value>
+</data>
+
+	<!-- ChangePassword.cshtml -->
+	<data name="Title_ChangePassword" xml:space="preserve">
+  <value>Change password</value>
+</data>
+	<data name="Placeholder_OldPassword" xml:space="preserve">
+  <value>Please enter your old password.</value>
+</data>
+	<data name="Label_OldPassword" xml:space="preserve">
+  <value>Old Password</value>
+</data>
+	<data name="Placeholder_NewPassword" xml:space="preserve">
+  <value>Please enter your new password.</value>
+</data>
+	<data name="Label_NewPassword" xml:space="preserve">
+  <value>New Password</value>
+</data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+  <value>Please confirm your new password.</value>
+</data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+  <value>Confirm Password</value>
+</data>
+	<data name="Button_UpdatePassword" xml:space="preserve">
+  <value>Update password</value>
+</data>
+	<data name="StartingAt" xml:space="preserve">
+  <value>Starting at</value>
+</data>
+	<data name="Restaurant" xml:space="preserve">
+  <value>Restaurant:</value>
+</data>
+	<data name="NatureTrail" xml:space="preserve">
+  <value>Nature trail:</value>
+</data>
+	<data name="Attraction" xml:space="preserve">
+  <value>Attraction:</value>
+</data>
+
+</root>

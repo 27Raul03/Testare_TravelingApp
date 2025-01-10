@@ -2,53 +2,62 @@
 @model Testare_TravelingApp.Pages.NatureTrails.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = @Model._localizer["Title_NatureTrails"];
 }
 
-<h1>Nature Trails</h1>
+<h1>@Model._localizer["Title_NatureTrails"]</h1>
 
 <p>
-    <a asp-page="Create" class="btn" style="background-color: lightblue;">Create New</a>
+    <a asp-page="Create" class="btn" style="background-color: lightblue;">
+        @Model._localizer["Button_CreateNew"]
+    </a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NatureTrail[0].Name)
+                @Model._localizer["Column_Name"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NatureTrail[0].Description)
+                @Model._localizer["Column_Description"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NatureTrail[0].Location)
+                @Model._localizer["Column_Location"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NatureTrail[0].LengthInKm)
+                @Model._localizer["Column_LengthInKm"]
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.NatureTrail) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LengthInKm)
-            </td>
-            <td>
-                    <a asp-page="./Edit" asp-route-id="@item.NatureTrailId" class="btn btn-sm" style="background-color: pink;">Edit</a>
-                    <a asp-page="./Details" asp-route-id="@item.NatureTrailId" class="btn btn-sm" style="background-color: sandybrown;">Details</a>
-                <a asp-page="./Delete" asp-route-id="@item.NatureTrailId" class="btn btn-danger btn-sm">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.NatureTrail)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LengthInKm)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.NatureTrailId" class="btn btn-sm" style="background-color: pink;">
+                        @Model._localizer["Button_Edit"]
+                    </a>
+                    <a asp-page="./Details" asp-route-id="@item.NatureTrailId" class="btn btn-sm" style="background-color: sandybrown;">
+                        @Model._localizer["Button_Details"]
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.NatureTrailId" class="btn btn-danger btn-sm">
+                        @Model._localizer["Button_Delete"]
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

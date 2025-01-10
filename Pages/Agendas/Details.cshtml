@@ -2,74 +2,70 @@
 @model Testare_TravelingApp.Pages.Agendas.DetailsModel
 
 @{
-    ViewData["Title"] = "Agenda Details";
+    ViewData["Title"] = @Model._localizer["Title_DetailsAgenda"];
 }
 
-<h1>Agenda Details</h1>
+<h1>@Model._localizer["Title_DetailsAgenda"]</h1>
 
 <div>
-    <h4>Agenda</h4>
+    <h4>@Model._localizer["Label_Agenda"]</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Agenda.Title)
+            @Model._localizer["Label_Title"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Agenda.Title)
         </dd>
 
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Agenda.DateCreated)
+            @Model._localizer["Label_DateCreated"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Agenda.DateCreated)
         </dd>
 
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Agenda.User)
+            @Model._localizer["Label_User"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Agenda.User.Email)
         </dd>
 
-        <!-- Afișează activitatea dacă este selectată -->
         @if (Model.Agenda.Activity != null)
         {
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Agenda.Activity)
+                @Model._localizer["Label_Activity"]
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Agenda.Activity.Name)
             </dd>
         }
 
-        <!-- Afișează restaurantul dacă este selectat -->
         @if (Model.Agenda.Restaurant != null)
         {
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Agenda.Restaurant)
+                @Model._localizer["Label_Restaurant"]
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Agenda.Restaurant.Name)
             </dd>
         }
 
-        <!-- Afișează atracția turistică dacă este selectată -->
         @if (Model.Agenda.TouristAttraction != null)
         {
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Agenda.TouristAttraction)
+                @Model._localizer["Label_TouristAttraction"]
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Agenda.TouristAttraction.Name)
             </dd>
         }
 
-        <!-- Afișează traseul de natură dacă este selectat -->
         @if (Model.Agenda.NatureTrail != null)
         {
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Agenda.NatureTrail)
+                @Model._localizer["Label_NatureTrail"]
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Agenda.NatureTrail.Name)
@@ -79,6 +75,10 @@
 </div>
 
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Agenda.AgendaId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Agenda.AgendaId" class="btn btn-warning">
+        @Model._localizer["Button_Edit"]
+    </a> |
+    <a asp-page="./Index" class="btn btn-primary">
+        @Model._localizer["Button_BackToList"]
+    </a>
 </div>

@@ -17,4 +17,16 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+	
+	<PropertyGroup>
+		<EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+  <EmbeddedResource Include="Resources\*.resx" />
+</ItemGroup>
+
 </Project>

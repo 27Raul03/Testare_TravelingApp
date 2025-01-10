@@ -1,36 +1,40 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.NatureTrails.DetailsModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @_localizer["Title_DetailsNatureTrail"];
 }
 
-<h1>Details</h1>
+<h1>@_localizer["Title_DetailsNatureTrail"]</h1>
 
 <div>
-    <h4>NatureTrail</h4>
+    <h4>@_localizer["Label_NatureTrail"]</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NatureTrail.Name)
+            @_localizer["Column_Name"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NatureTrail.Name)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NatureTrail.Description)
+            @_localizer["Column_Description"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NatureTrail.Description)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NatureTrail.Location)
+            @_localizer["Column_Location"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NatureTrail.Location)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NatureTrail.LengthInKm)
+            @_localizer["Column_LengthInKm"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.NatureTrail.LengthInKm)
@@ -38,6 +42,10 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.NatureTrail.NatureTrailId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.NatureTrail.NatureTrailId" class="btn btn-warning">
+        @_localizer["Button_Edit"]
+    </a>
+    <a asp-page="./Index" class="btn btn-secondary">
+        @_localizer["Button_BackToList"]
+    </a>
 </div>

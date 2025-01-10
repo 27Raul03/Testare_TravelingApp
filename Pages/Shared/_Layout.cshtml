@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using System.Globalization
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> Localizer
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,7 +15,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="https://cdn-icons-png.flaticon.com/512/7057/7057824.png" /></a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7057/7057824.png" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,26 +25,100 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Users/Index">Users</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Users/Index">@Localizer["Menu_Users"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Agendas/Index">Agenda</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Agendas/Index">@Localizer["Menu_Agenda"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Activities/Index">Activities</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Activities/Index">@Localizer["Menu_Activities"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Restaurants/Index">Restaurants</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Restaurants/Index">@Localizer["Menu_Restaurants"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/NatureTrails/Index">NatureTrails</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/NatureTrails/Index">@Localizer["Menu_NatureTrails"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Reviews/Index">Reviews</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Reviews/Index">@Localizer["Menu_Reviews"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/TouristAttractions/Index">TouristAttractions</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/TouristAttractions/Index">@Localizer["Menu_TouristAttractions"]</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/files/HELP.txt" download="HELP.txt">@Localizer["Menu_Help"]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark"
+                               href="#"
+                               id="languageDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                @(
+                                    CultureInfo.CurrentUICulture.TwoLetterISOLanguageName switch
+                                    {
+                                        "ro" => "Română",
+                                        "fr" => "Français",
+                                        _ => "English"
+                                    }
+                                    )
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" data-lang="en" href="#">English</a></li>
+                                <li><a class="dropdown-item" data-lang="ro" href="#">Română</a></li>
+                                <li><a class="dropdown-item" data-lang="fr" href="#">Français</a></li>
+                            </ul>
+                        </li>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const dropdownItems = document.querySelectorAll(".dropdown-item");
+                                const currentUrl = new URL(window.location.href); // Obținem URL-ul curent
+                                const idParam = currentUrl.searchParams.get("id"); // Obținem parametrul 'id' dacă există
+
+                                dropdownItems.forEach(item => {
+                                    const lang = item.getAttribute("data-lang");
+                                    const basePath = currentUrl.pathname; // Obținem calea URL-ului curent
+                                    const searchParams = new URLSearchParams(currentUrl.search); // Obținem toți parametrii din query
+
+                                    // Adăugăm `culture` și `ui-culture` în query
+                                    searchParams.set("culture", lang);
+                                    searchParams.set("ui-culture", lang);
+
+                                    // Construim noul URL
+                                    const newUrl = idParam
+                                        ? `${basePath}?${searchParams.toString()}` // Cu id
+                                        : `${basePath}?${searchParams.toString()}`; // Fără id
+
+                                    item.href = newUrl; // Setăm href-ul pentru fiecare limbă
+                                });
+                            });
+                        </script>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+                                dropdownItems.forEach(item => {
+                                    item.addEventListener("click", function (e) {
+                                        e.preventDefault();
+                                        const lang = this.getAttribute("data-lang");
+
+                                        // Generăm valoarea cookie-ului
+                                        // Format tipic: c=<cultura>|uic=<cultura> ex: "c=en|uic=en"
+                                        const cookieValue = `c=${lang}|uic=${lang}`;
+
+                                        // Setăm cookie-ul .AspNetCore.Culture
+                                        // Path=/ înseamnă valabil în toată aplicația
+                                        document.cookie = `.AspNetCore.Culture=${cookieValue}; path=/; max-age=31560000`; // ~1 an
+
+                                        // Reîncarcă pagina pentru a lua cultura din cookie
+                                        window.location.reload();
+                                    });
+                                });
+                            });
+                        </script>
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -54,7 +133,7 @@
 
     <footer class="border-top footer text-muted mt-auto">
         <div class="container">
-            &copy; 2024 - ProiectTestare - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2024 - ProiectTestare - <a asp-area="" asp-page="/Privacy">@Localizer["Menu_Privacy"]</a>
         </div>
     </footer>
 

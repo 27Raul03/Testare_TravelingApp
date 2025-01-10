@@ -785,5 +785,16 @@
 	<data name="Button_UpdatePassword" xml:space="preserve">
   <value>Actualizează parola</value>
 </data>
-
+	<data name="StartingAt" xml:space="preserve">
+  <value>Începe la</value>
+</data>
+	<data name="Restaurant" xml:space="preserve">
+  <value>Restaurant:</value>
+</data>
+	<data name="NatureTrail" xml:space="preserve">
+  <value>Traseu natural:</value>
+</data>
+	<data name="Attraction" xml:space="preserve">
+  <value>Atracție:</value>
+</data>
 </root>

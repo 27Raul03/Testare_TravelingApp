@@ -708,5 +708,72 @@
 	<data name="Button_Save" xml:space="preserve">
   <value>Save</value>
 </data>
+	<data name="Title_Profile" xml:space="preserve">
+  <value>Profile</value>
+</data>
+	<data name="Placeholder_Username" xml:space="preserve">
+  <value>Please choose your username.</value>
+</data>
+	<data name="Label_Username" xml:space="preserve">
+  <value>Username</value>
+</data>
+	<data name="Placeholder_PhoneNumber" xml:space="preserve">
+  <value>Please enter your phone number.</value>
+</data>
+	<data name="Label_PhoneNumber" xml:space="preserve">
+  <value>Phone Number</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Save</value>
+</data>
+
+	<!-- Email.cshtml -->
+	<data name="Title_ManageEmail" xml:space="preserve">
+  <value>Manage Email</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>Please enter your email.</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Button_SendVerificationEmail" xml:space="preserve">
+  <value>Send verification email</value>
+</data>
+	<data name="Placeholder_NewEmail" xml:space="preserve">
+  <value>Please enter new email.</value>
+</data>
+	<data name="Label_NewEmail" xml:space="preserve">
+  <value>New Email</value>
+</data>
+	<data name="Button_ChangeEmail" xml:space="preserve">
+  <value>Change email</value>
+</data>
+
+	<!-- ChangePassword.cshtml -->
+	<data name="Title_ChangePassword" xml:space="preserve">
+  <value>Change password</value>
+</data>
+	<data name="Placeholder_OldPassword" xml:space="preserve">
+  <value>Please enter your old password.</value>
+</data>
+	<data name="Label_OldPassword" xml:space="preserve">
+  <value>Old Password</value>
+</data>
+	<data name="Placeholder_NewPassword" xml:space="preserve">
+  <value>Please enter your new password.</value>
+</data>
+	<data name="Label_NewPassword" xml:space="preserve">
+  <value>New Password</value>
+</data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+  <value>Please confirm your new password.</value>
+</data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+  <value>Confirm Password</value>
+</data>
+	<data name="Button_UpdatePassword" xml:space="preserve">
+  <value>Update password</value>
+</data>
 
 </root>

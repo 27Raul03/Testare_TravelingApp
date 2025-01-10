@@ -624,5 +624,72 @@
 	<data name="Title_EditNatureTrail" xml:space="preserve">
   <value>Modifier le Sentier Naturel</value>
 </data>
+	<data name="Title_Profile" xml:space="preserve">
+  <value>Profil</value>
+</data>
+	<data name="Placeholder_Username" xml:space="preserve">
+  <value>Veuillez choisir votre nom d'utilisateur.</value>
+</data>
+	<data name="Label_Username" xml:space="preserve">
+  <value>Nom d'utilisateur</value>
+</data>
+	<data name="Placeholder_PhoneNumber" xml:space="preserve">
+  <value>Veuillez entrer votre numéro de téléphone.</value>
+</data>
+	<data name="Label_PhoneNumber" xml:space="preserve">
+  <value>Numéro de téléphone</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Enregistrer</value>
+</data>
+
+	<!-- Email.cshtml -->
+	<data name="Title_ManageEmail" xml:space="preserve">
+  <value>Gérer l'e-mail</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>Veuillez entrer votre adresse e-mail.</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>E-mail</value>
+</data>
+	<data name="Button_SendVerificationEmail" xml:space="preserve">
+  <value>Envoyer l'e-mail de vérification</value>
+</data>
+	<data name="Placeholder_NewEmail" xml:space="preserve">
+  <value>Veuillez entrer la nouvelle adresse e-mail.</value>
+</data>
+	<data name="Label_NewEmail" xml:space="preserve">
+  <value>Nouvel e-mail</value>
+</data>
+	<data name="Button_ChangeEmail" xml:space="preserve">
+  <value>Changer l'e-mail</value>
+</data>
+
+	<!-- ChangePassword.cshtml -->
+	<data name="Title_ChangePassword" xml:space="preserve">
+  <value>Changer le mot de passe</value>
+</data>
+	<data name="Placeholder_OldPassword" xml:space="preserve">
+  <value>Veuillez entrer votre ancien mot de passe.</value>
+</data>
+	<data name="Label_OldPassword" xml:space="preserve">
+  <value>Ancien mot de passe</value>
+</data>
+	<data name="Placeholder_NewPassword" xml:space="preserve">
+  <value>Veuillez entrer votre nouveau mot de passe.</value>
+</data>
+	<data name="Label_NewPassword" xml:space="preserve">
+  <value>Nouveau mot de passe</value>
+</data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+  <value>Veuillez confirmer votre nouveau mot de passe.</value>
+</data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+  <value>Confirmer le mot de passe</value>
+</data>
+	<data name="Button_UpdatePassword" xml:space="preserve">
+  <value>Mettre à jour le mot de passe</value>
+</data>
 
 </root>

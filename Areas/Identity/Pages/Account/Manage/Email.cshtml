@@ -1,40 +1,73 @@
 ﻿@page
 @model EmailModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
+
 @{
-    ViewData["Title"] = "Manage Email";
+    // Înlocuiești "Manage Email" cu cheie din resurse
+    ViewData["Title"] = _localizer["Title_ManageEmail"];
     ViewData["ActivePage"] = ManageNavPages.Email;
 }
 
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
+
 <div class="row">
     <div class="col-md-6">
         <form id="email-form" method="post">
             <div asp-validation-summary="All" class="text-danger" role="alert"></div>
+
             @if (Model.IsEmailConfirmed)
             {
                 <div class="form-floating mb-3 input-group">
-                    <input asp-for="Email" class="form-control" placeholder="Please enter your email." disabled />
-                        <div class="input-group-append">
-                            <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
-                        </div>
-                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email"
+                           class="form-control"
+                           placeholder="@_localizer["Placeholder_Email"]"
+                           disabled />
+                    <div class="input-group-append">
+                        <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
+                    </div>
+                    <label asp-for="Email" class="form-label">
+                        @_localizer["Label_Email"]
+                    </label>
                 </div>
             }
             else
             {
                 <div class="form-floating mb-3">
-                    <input asp-for="Email" class="form-control" placeholder="Please enter your email." disabled />
-                    <label asp-for="Email" class="form-label"></label>
-                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
+                    <input asp-for="Email"
+                           class="form-control"
+                           placeholder="@_localizer["Placeholder_Email"]"
+                           disabled />
+                    <label asp-for="Email" class="form-label">
+                        @_localizer["Label_Email"]
+                    </label>
+                    <button id="email-verification"
+                            type="submit"
+                            asp-page-handler="SendVerificationEmail"
+                            class="btn btn-link">
+                        @_localizer["Button_SendVerificationEmail"]
+                    </button>
                 </div>
             }
+
             <div class="form-floating mb-3">
-                <input asp-for="Input.NewEmail" class="form-control" autocomplete="email" aria-required="true" placeholder="Please enter new email." />
-                <label asp-for="Input.NewEmail" class="form-label"></label>
+                <input asp-for="Input.NewEmail"
+                       class="form-control"
+                       autocomplete="email"
+                       aria-required="true"
+                       placeholder="@_localizer["Placeholder_NewEmail"]" />
+                <label asp-for="Input.NewEmail" class="form-label">
+                    @_localizer["Label_NewEmail"]
+                </label>
                 <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
             </div>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg btn-primary">Change email</button>
+
+            <button id="change-email-button"
+                    type="submit"
+                    asp-page-handler="ChangeEmail"
+                    class="w-100 btn btn-lg btn-primary">
+                @_localizer["Button_ChangeEmail"]
+            </button>
         </form>
     </div>
 </div>

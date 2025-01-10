@@ -718,5 +718,72 @@
 	<data name="Button_Save" xml:space="preserve">
   <value>Salvează</value>
 </data>
+	<data name="Title_Profile" xml:space="preserve">
+  <value>Profil</value>
+</data>
+	<data name="Placeholder_Username" xml:space="preserve">
+  <value>Vă rugăm să introduceți un username.</value>
+</data>
+	<data name="Label_Username" xml:space="preserve">
+  <value>Nume de utilizator</value>
+</data>
+	<data name="Placeholder_PhoneNumber" xml:space="preserve">
+  <value>Vă rugăm să introduceți numărul de telefon.</value>
+</data>
+	<data name="Label_PhoneNumber" xml:space="preserve">
+  <value>Număr de telefon</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Salvează</value>
+</data>
+
+	<!-- Email.cshtml -->
+	<data name="Title_ManageEmail" xml:space="preserve">
+  <value>Gestionare Email</value>
+</data>
+	<data name="Placeholder_Email" xml:space="preserve">
+  <value>Vă rugăm să introduceți adresa de email.</value>
+</data>
+	<data name="Label_Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+	<data name="Button_SendVerificationEmail" xml:space="preserve">
+  <value>Trimite email de verificare</value>
+</data>
+	<data name="Placeholder_NewEmail" xml:space="preserve">
+  <value>Vă rugăm să introduceți noua adresă de email.</value>
+</data>
+	<data name="Label_NewEmail" xml:space="preserve">
+  <value>Email nou</value>
+</data>
+	<data name="Button_ChangeEmail" xml:space="preserve">
+  <value>Schimbă adresa de email</value>
+</data>
+
+	<!-- ChangePassword.cshtml -->
+	<data name="Title_ChangePassword" xml:space="preserve">
+  <value>Schimbare parolă</value>
+</data>
+	<data name="Placeholder_OldPassword" xml:space="preserve">
+  <value>Vă rugăm să introduceți parola veche.</value>
+</data>
+	<data name="Label_OldPassword" xml:space="preserve">
+  <value>Parolă veche</value>
+</data>
+	<data name="Placeholder_NewPassword" xml:space="preserve">
+  <value>Vă rugăm să introduceți parola nouă.</value>
+</data>
+	<data name="Label_NewPassword" xml:space="preserve">
+  <value>Parolă nouă</value>
+</data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+  <value>Vă rugăm să confirmați parola nouă.</value>
+</data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+  <value>Confirmare parolă</value>
+</data>
+	<data name="Button_UpdatePassword" xml:space="preserve">
+  <value>Actualizează parola</value>
+</data>
 
 </root>

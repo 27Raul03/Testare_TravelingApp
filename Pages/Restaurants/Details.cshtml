@@ -1,43 +1,52 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.Restaurants.DetailsModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @Model._localizer["Title_DetailsRestaurant"];
 }
 
-<h1>Details</h1>
+<h1>@Model._localizer["Title_DetailsRestaurant"]</h1>
 
 <div>
-    <h4>Restaurant</h4>
+    <h4>@Model._localizer["Label_Restaurant"]</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Restaurant.Name)
+            @Model._localizer["Column_Name"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Restaurant.Name)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Restaurant.Address)
+            @Model._localizer["Column_Address"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Restaurant.Address)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Restaurant.PhoneNumber)
+            @Model._localizer["Column_PhoneNumber"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Restaurant.PhoneNumber)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Restaurant.Cuisine)
+            @Model._localizer["Column_Cuisine"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Restaurant.Cuisine)
         </dd>
     </dl>
 </div>
+
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Restaurant.RestaurantId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Restaurant.RestaurantId" class="btn btn-warning">
+        @Model._localizer["Button_Edit"]
+    </a>
+    <a asp-page="./Index" class="btn btn-primary">
+        @Model._localizer["Button_BackToList"]
+    </a>
 </div>

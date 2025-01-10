@@ -1,52 +1,69 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.Restaurants.EditModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = @Model._localizer["Title_EditRestaurant"];
 }
 
-<h1>Edit</h1>
+<h1>@Model._localizer["Title_EditRestaurant"]</h1>
 
-<h4>Restaurant</h4>
+<h4>@Model._localizer["Label_Restaurant"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Restaurant.RestaurantId" />
+
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Restaurant.Name" class="control-label"></label>
+                <label asp-for="Restaurant.Name" class="control-label">
+                    @Model._localizer["Column_Name"]
+                </label>
                 <input asp-for="Restaurant.Name" class="form-control" />
                 <span asp-validation-for="Restaurant.Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="Restaurant.Address" class="control-label"></label>
+                <label asp-for="Restaurant.Address" class="control-label">
+                    @Model._localizer["Column_Address"]
+                </label>
                 <input asp-for="Restaurant.Address" class="form-control" />
                 <span asp-validation-for="Restaurant.Address" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Restaurant.PhoneNumber" class="control-label"></label>
+                <label asp-for="Restaurant.PhoneNumber" class="control-label">
+                    @Model._localizer["Column_PhoneNumber"]
+                </label>
                 <input asp-for="Restaurant.PhoneNumber" class="form-control" />
                 <span asp-validation-for="Restaurant.PhoneNumber" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Restaurant.Cuisine" class="control-label"></label>
+                <label asp-for="Restaurant.Cuisine" class="control-label">
+                    @Model._localizer["Column_Cuisine"]
+                </label>
                 <input asp-for="Restaurant.Cuisine" class="form-control" />
                 <span asp-validation-for="Restaurant.Cuisine" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="@Model._localizer["Button_Save"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" class="btn btn-secondary">
+        @Model._localizer["Button_BackToList"]
+    </a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

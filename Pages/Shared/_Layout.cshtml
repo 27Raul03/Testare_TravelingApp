@@ -47,6 +47,27 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="/files/HELP.txt" download="HELP.txt">@Localizer["Menu_Help"]</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark"
+                               href="#"
+                               id="languageDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Română
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="?culture=en&ui-culture=en">English</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="?culture=ro&ui-culture=ro">Română</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="?culture=fr&ui-culture=fr">Français</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

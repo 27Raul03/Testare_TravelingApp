@@ -1,53 +1,70 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.TouristAttractions.EditModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = @_localizer["Title_EditTouristAttraction"];
 }
 
-<h1>Edit</h1>
+<h1>@_localizer["Title_EditTouristAttraction"]</h1>
 
-<h4>TouristAttraction</h4>
+<h4>@_localizer["Label_TouristAttraction"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="TouristAttraction.TouristAttractionId" />
+
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="TouristAttraction.Name" class="control-label"></label>
+                <label asp-for="TouristAttraction.Name" class="control-label">
+                    @_localizer["Column_Name"]
+                </label>
                 <input asp-for="TouristAttraction.Name" class="form-control" />
                 <span asp-validation-for="TouristAttraction.Name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="TouristAttraction.Description" class="control-label"></label>
+                <label asp-for="TouristAttraction.Description" class="control-label">
+                    @_localizer["Column_Description"]
+                </label>
                 <input asp-for="TouristAttraction.Description" class="form-control" />
                 <span asp-validation-for="TouristAttraction.Description" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <span class="text-danger">*</span>
-                <label asp-for="TouristAttraction.Location" class="control-label"></label>
+                <label asp-for="TouristAttraction.Location" class="control-label">
+                    @_localizer["Column_Location"]
+                </label>
                 <input asp-for="TouristAttraction.Location" class="form-control" />
                 <span asp-validation-for="TouristAttraction.Location" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="TouristAttraction.OpeningHours" class="control-label"></label>
+                <label asp-for="TouristAttraction.OpeningHours" class="control-label">
+                    @_localizer["Column_OpeningHours"]
+                </label>
                 <input asp-for="TouristAttraction.OpeningHours" class="form-control" />
                 <span asp-validation-for="TouristAttraction.OpeningHours" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="@_localizer["Button_Save"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" class="btn btn-secondary">
+        @_localizer["Button_BackToList"]
+    </a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

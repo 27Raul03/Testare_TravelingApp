@@ -174,4 +174,389 @@
   <data name="CurrentLanguage" xml:space="preserve">
     <value>FR</value>
   </data>
+	<data name="Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="AddNewActivity" xml:space="preserve">
+    <value>Ajouter une nouvelle activité</value>
+  </data>
+	<data name="CreatedAt" xml:space="preserve">
+    <value>Créé le :</value>
+  </data>
+	<data name="CreatedBy" xml:space="preserve">
+    <value>Créé par :</value>
+  </data>
+	<data name="Activity" xml:space="preserve">
+    <value>Activité :</value>
+  </data>
+	<data name="Restaurant" xml:space="preserve">
+    <value>Restaurant :</value>
+  </data>
+	<data name="NatureTrail" xml:space="preserve">
+    <value>Sentier naturel :</value>
+  </data>
+	<data name="TouristAttraction" xml:space="preserve">
+    <value>Attraction :</value>
+  </data>
+	<data name="Edit" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+	<data name="Details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+	<data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+	<data name="NoAgendasFound" xml:space="preserve">
+    <value>Aucun agenda trouvé.</value>
+  </data>
+	<data name="CreateTitle" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+	<data name="AgendaLabel" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="TitleLabel" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+	<data name="DateCreatedLabel" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+	<data name="ActivityLabel" xml:space="preserve">
+    <value>Activité</value>
+  </data>
+	<data name="RestaurantLabel" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="NatureTrailLabel" xml:space="preserve">
+    <value>Sentier naturel</value>
+  </data>
+	<data name="TouristAttractionLabel" xml:space="preserve">
+    <value>Attraction touristique</value>
+  </data>
+	<data name="SelectOption" xml:space="preserve">
+    <value>Veuillez sélectionner...</value>
+  </data>
+	<data name="CreateButtonLabel" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+	<data name="BackToListLabel" xml:space="preserve">
+    <value>Retour à la liste</value>
+  </data>
+	<data name="UserNotFound" xml:space="preserve">
+    <value>Utilisateur introuvable</value>
+  </data>
+	<data name="UserNotAuthenticated" xml:space="preserve">
+    <value>L'utilisateur n'est pas authentifié</value>
+  </data>
+	<data name="Title_Activities" xml:space="preserve">
+    <value>Activités</value>
+  </data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Créer nouveau</value>
+  </data>
+	<data name="Column_StartDate" xml:space="preserve">
+    <value>Date de début</value>
+  </data>
+	<data name="Column_EndDate" xml:space="preserve">
+    <value>Date de fin</value>
+  </data>
+	<data name="CreateActivity" xml:space="preserve">
+    <value>Créer une activité</value>
+  </data>
+	<data name="ActivityName" xml:space="preserve">
+    <value>Nom de l'activité</value>
+  </data>
+	<data name="ActivityDescription" xml:space="preserve">
+    <value>Description de l'activité</value>
+  </data>
+	<data name="ActivityLocation" xml:space="preserve">
+    <value>Lieu de l'activité</value>
+  </data>
+	<data name="ActivityStartDate" xml:space="preserve">
+    <value>Date de début</value>
+  </data>
+	<data name="ActivityEndDate" xml:space="preserve">
+    <value>Date de fin</value>
+  </data>
+	<data name="CreateButton" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+	<data name="BackToList" xml:space="preserve">
+    <value>Retour à la liste</value>
+  </data>
+	<data name="Title_Delete" xml:space="preserve">
+    <value>Supprimer l'activité</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer cette activité ?</value>
+  </data>
+	<data name="Title_Details" xml:space="preserve">
+    <value>Détails de l'activité</value>
+  </data>
+	<data name="Title_Edit" xml:space="preserve">
+    <value>Modifier l'activité</value>
+  </data>
+	<data name="Label_Required" xml:space="preserve">
+    <value>*</value>
+  </data>
+	<data name="Validation_Error" xml:space="preserve">
+    <value>Erreur de validation des données.</value>
+  </data>
+	<data name="Title_DetailsAgenda" xml:space="preserve">
+    <value>Détails de l'agenda</value>
+  </data>
+	<data name="Label_Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="Label_Title" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+	<data name="Label_DateCreated" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+	<data name="Label_User" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+	<data name="Label_Activity" xml:space="preserve">
+    <value>Activité</value>
+  </data>
+	<data name="Label_Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="Label_TouristAttraction" xml:space="preserve">
+    <value>Attraction touristique</value>
+  </data>
+	<data name="Label_NatureTrail" xml:space="preserve">
+    <value>Sentier naturel</value>
+  </data>
+	<data name="Title_Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer ceci ?</value>
+  </data>
+	<data name="Agenda_Title" xml:space="preserve">
+    <value>Titre</value>
+  </data>
+	<data name="Agenda_DateCreated" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+	<data name="Agenda_User" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+	<data name="Title_EditAgenda" xml:space="preserve">
+    <value>Modifier l'Agenda</value>
+  </data>
+	<data name="Button_Save" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+	<data name="Label_SelectOption" xml:space="preserve">
+    <value>Veuillez sélectionner...</value>
+  </data>
+	<data name="Agenda_UserId" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+	<data name="Agenda_ActivityId" xml:space="preserve">
+    <value>Activité</value>
+  </data>
+	<data name="Agenda_RestaurantId" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+	<data name="Agenda_NatureTrailId" xml:space="preserve">
+    <value>Sentier naturel</value>
+  </data>
+	<data name="Agenda_TouristAttractionId" xml:space="preserve">
+    <value>Attraction touristique</value>
+  </data>
+	<data name="Title_Users" xml:space="preserve">
+    <value>Liste des utilisateurs</value>
+  </data>
+	<data name="Column_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+	<data name="Column_Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+	<data name="Title_Reviews" xml:space="preserve">
+    <value>Avis</value>
+  </data>
+	<data name="Button_AddReview" xml:space="preserve">
+    <value>Ajouter un avis</value>
+  </data>
+	<data name="Label_Comment" xml:space="preserve">
+    <value>Commentaire :</value>
+  </data>
+	<data name="Label_Rating" xml:space="preserve">
+    <value>Note :</value>
+  </data>
+	<data name="Label_DatePosted" xml:space="preserve">
+    <value>Date de publication :</value>
+  </data>
+	<data name="Badge_Activity" xml:space="preserve">
+    <value>Activité :</value>
+  </data>
+	<data name="Badge_Restaurant" xml:space="preserve">
+    <value>Restaurant :</value>
+  </data>
+	<data name="Badge_NatureTrail" xml:space="preserve">
+    <value>Sentier naturel :</value>
+  </data>
+	<data name="Badge_Attraction" xml:space="preserve">
+    <value>Attraction :</value>
+  </data>
+	<data name="Title_EditReview" xml:space="preserve">
+    <value>Modifier l'avis</value>
+  </data>
+	<data name="Title_CreateReview" xml:space="preserve">
+    <value>Créer un avis</value>
+  </data>
+	<data name="Label_Review" xml:space="preserve">
+    <value>Avis</value>
+  </data>
+	<data name="Button_Create" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+	<data name="Title_ReviewDetails" xml:space="preserve">
+    <value>Détails de l'avis</value>
+  </data>
+	<data name="Label_Review" xml:space="preserve">
+    <value>Avis</value>
+  </data>
+	<data name="Title_DeleteReview" xml:space="preserve">
+    <value>Supprimer l'avis</value>
+  </data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer cet avis ?</value>
+  </data>
+	<data name="Title_Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+	<data name="Button_CreateNew" xml:space="preserve">
+    <value>Créer nouveau</value>
+  </data>
+	<data name="Column_Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+	<data name="Column_PhoneNumber" xml:space="preserve">
+    <value>Numéro de téléphone</value>
+  </data>
+	<data name="Column_Cuisine" xml:space="preserve">
+    <value>Type de cuisine</value>
+  </data>
+	<data name="Title_NatureTrails" xml:space="preserve">
+    <value>Sentiers naturels</value>
+  </data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+    <value>Longueur (Km)</value>
+  </data>
+	<data name="Title_TouristAttractions" xml:space="preserve">
+    <value>Attractions touristiques</value>
+  </data>
+	<data name="Column_OpeningHours" xml:space="preserve">
+    <value>Heures d'ouverture</value>
+  </data>
+	<data name="Menu_Users" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
+	<data name="Menu_Agenda" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+	<data name="Menu_Activities" xml:space="preserve">
+    <value>Activités</value>
+  </data>
+	<data name="Menu_Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+	<data name="Menu_NatureTrails" xml:space="preserve">
+    <value>Sentiers naturels</value>
+  </data>
+	<data name="Menu_Reviews" xml:space="preserve">
+    <value>Avis</value>
+  </data>
+	<data name="Menu_TouristAttractions" xml:space="preserve">
+    <value>Attractions touristiques</value>
+  </data>
+	<data name="Menu_Help" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+	<data name="Menu_Privacy" xml:space="preserve">
+    <value>Confidentialité</value>
+  </data>
+	<data name="Menu_Hello" xml:space="preserve">
+    <value>Bonjour</value>
+  </data>
+	<data name="Menu_Logout" xml:space="preserve">
+    <value>Déconnexion</value>
+  </data>
+	<data name="Menu_Register" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+	<data name="Menu_Login" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+	<data name="Menu_Manage" xml:space="preserve">
+    <value>Gérer</value>
+  </data>
+	<data name="Title_Register" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+	<data name="Label_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+	<data name="Placeholder_Email" xml:space="preserve">
+    <value>nom@exemple.com</value>
+  </data>
+	<data name="Label_Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+	<data name="Placeholder_Password" xml:space="preserve">
+    <value>Saisissez le mot de passe</value>
+  </data>
+	<data name="Label_ConfirmPassword" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+	<data name="Placeholder_ConfirmPassword" xml:space="preserve">
+    <value>Resaisissez le mot de passe</value>
+  </data>
+	<data name="Button_Register" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+	<data name="Title_Login" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+	<data name="Label_RememberMe" xml:space="preserve">
+    <value>Se souvenir de moi</value>
+  </data>
+	<data name="Button_Login" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+	<data name="Link_ForgotPassword" xml:space="preserve">
+    <value>Mot de passe oublié ?</value>
+  </data>
+	<data name="Link_RegisterNewUser" xml:space="preserve">
+    <value>Inscrire un nouvel utilisateur</value>
+  </data>
+	<data name="Link_ResendEmailConfirmation" xml:space="preserve">
+    <value>Renvoyer la confirmation par e-mail</value>
+  </data>
+	<data name="Title_ResendEmailConfirmation" xml:space="preserve">
+    <value>Renvoyer la confirmation par e-mail</value>
+  </data>
+	<data name="Title_ForgotPassword" xml:space="preserve">
+    <value>Mot de passe oublié ?</value>
+  </data>
+	<data name="Heading_EnterYourEmail" xml:space="preserve">
+    <value>Saisissez votre adresse e-mail.</value>
+  </data>
+	<data name="Button_Resend" xml:space="preserve">
+    <value>Renvoyer</value>
+  </data>
+	<data name="Button_ResetPassword" xml:space="preserve">
+    <value>Réinitialiser le mot de passe</value>
+  </data>
+	<data name="Menu_Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+
 </root>

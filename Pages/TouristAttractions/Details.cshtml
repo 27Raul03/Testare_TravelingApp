@@ -1,36 +1,40 @@
 ﻿@page
 @model Testare_TravelingApp.Pages.TouristAttractions.DetailsModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Testare_TravelingApp.Resources> _localizer
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @_localizer["Title_DetailsTouristAttraction"];
 }
 
-<h1>Details</h1>
+<h1>@_localizer["Title_DetailsTouristAttraction"]</h1>
 
 <div>
-    <h4>TouristAttraction</h4>
+    <h4>@_localizer["Label_TouristAttraction"]</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TouristAttraction.Name)
+            @_localizer["Column_Name"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TouristAttraction.Name)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TouristAttraction.Description)
+            @_localizer["Column_Description"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TouristAttraction.Description)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TouristAttraction.Location)
+            @_localizer["Column_Location"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TouristAttraction.Location)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TouristAttraction.OpeningHours)
+            @_localizer["Column_OpeningHours"]
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TouristAttraction.OpeningHours)
@@ -38,6 +42,10 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.TouristAttraction.TouristAttractionId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.TouristAttraction.TouristAttractionId" class="btn btn-warning">
+        @_localizer["Button_Edit"]
+    </a>
+    <a asp-page="./Index" class="btn btn-secondary">
+        @_localizer["Button_BackToList"]
+    </a>
 </div>

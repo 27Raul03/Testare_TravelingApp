@@ -558,5 +558,71 @@
 	<data name="Menu_Language" xml:space="preserve">
     <value>Langue</value>
   </data>
+	<data name="Title_Create" xml:space="preserve">
+  <value>Créer</value>
+</data>
+	<data name="Title_DeleteRestaurant" xml:space="preserve">
+  <value>Supprimer le Restaurant</value>
+</data>
+	<data name="Title_DetailsRestaurant" xml:space="preserve">
+  <value>Détails du Restaurant</value>
+</data>
+	<data name="Title_EditRestaurant" xml:space="preserve">
+  <value>Modifier le Restaurant</value>
+</data>
+	<data name="Label_Restaurant" xml:space="preserve">
+  <value>Restaurant</value>
+</data>
+	<data name="Column_Name" xml:space="preserve">
+  <value>Nom</value>
+</data>
+	<data name="Column_Address" xml:space="preserve">
+  <value>Adresse</value>
+</data>
+	<data name="Column_PhoneNumber" xml:space="preserve">
+  <value>Numéro de téléphone</value>
+</data>
+	<data name="Column_Cuisine" xml:space="preserve">
+  <value>Type de cuisine</value>
+</data>
+	<data name="Heading_DeleteConfirmation" xml:space="preserve">
+  <value>Êtes-vous sûr de vouloir supprimer ceci ?</value>
+</data>
+	<data name="Button_Create" xml:space="preserve">
+  <value>Créer</value>
+</data>
+	<data name="Button_Save" xml:space="preserve">
+  <value>Enregistrer</value>
+</data>
+	<data name="Button_BackToList" xml:space="preserve">
+  <value>Retour à la liste</value>
+</data>
+	<data name="Button_Delete" xml:space="preserve">
+  <value>Supprimer</value>
+</data>
+	<data name="Button_Edit" xml:space="preserve">
+  <value>Modifier</value>
+</data>
+	<data name="Label_NatureTrail" xml:space="preserve">
+  <value>Sentier Naturel</value>
+</data>
+	<data name="Column_Description" xml:space="preserve">
+  <value>Description</value>
+</data>
+	<data name="Column_Location" xml:space="preserve">
+  <value>Lieu</value>
+</data>
+	<data name="Column_LengthInKm" xml:space="preserve">
+  <value>Longueur (Km)</value>
+</data>
+	<data name="Title_DeleteNatureTrail" xml:space="preserve">
+  <value>Supprimer le Sentier Naturel</value>
+</data>
+	<data name="Title_DetailsNatureTrail" xml:space="preserve">
+  <value>Détails du Sentier Naturel</value>
+</data>
+	<data name="Title_EditNatureTrail" xml:space="preserve">
+  <value>Modifier le Sentier Naturel</value>
+</data>
 
 </root>
